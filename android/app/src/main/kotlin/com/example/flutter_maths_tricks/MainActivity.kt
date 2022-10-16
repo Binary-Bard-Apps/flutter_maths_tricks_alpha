@@ -1,4 +1,4 @@
-package com.example.flutter_maths_tricks
+package com.ankitkumar.maths_tricks_alpha
 
 import io.flutter.embedding.android.FlutterActivity
 

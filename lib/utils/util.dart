@@ -31,7 +31,6 @@ launchURL() async {
   }
 }
 
-
 share() async {
   await FlutterShare.share(
       title: 'Math Trick',
@@ -40,10 +39,8 @@ share() async {
       chooserTitle: '');
 }
 
-
-
 String getAppLink() {
-  String pkgName = "com.example.flutter_maths_tricks";
+  String pkgName = "com.ankitkumar.maths_tricks_alpha";
   String appStoreIdentifier = "1491556149";
   if (Platform.isAndroid) {
     return "https://play.google.com/store/apps/details?id=$pkgName";
@@ -52,7 +49,6 @@ String getAppLink() {
   }
   return "";
 }
-
 
 String decode(String codeUnits) {
   var unescape = HtmlUnescape();
@@ -100,7 +96,7 @@ String secToTime(int sec) {
           : second.toInt().toString());
 }
 
-showToast(String s,BuildContext context) {
+showToast(String s, BuildContext context) {
   Fluttertoast.showToast(
       msg: s,
       backgroundColor: getBackgroundColor(context),

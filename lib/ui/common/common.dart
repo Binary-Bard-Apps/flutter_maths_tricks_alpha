@@ -248,7 +248,7 @@ getSettingIcon(BuildContext context, {Color? color, bool? isWhite}) {
     child: SvgPicture.string(
       SvgModify.settingSvg((color == null) ? Colors.white : color,
           isWhite: isWhite),
-      height: 20,
+      height: 30,
     ),
   );
 }
@@ -261,7 +261,7 @@ getBackIcon({required Function function, Color? color, bool? isWhite}) {
     child: SvgPicture.string(
       SvgModify.backSvg((color == null) ? Colors.white : color,
           isWhite: isWhite),
-      height: 20,
+      height: 30,
     ),
   );
 }
@@ -273,7 +273,7 @@ getCloseIcon({required Function function, Color? color}) {
     },
     child: SvgPicture.string(
       SvgModify.closeSvg((color == null) ? Colors.white : color, isWhite: true),
-      height: 20,
+      height: 30,
     ),
   );
 }
