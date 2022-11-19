@@ -69,7 +69,7 @@ Future<void> main() async {
   HiveData.registerAdapter();
   HiveData.openAllBox();
 
-  runApp(MyApp());
+  runApp(MathApp());
 }
 
 Future<void> _configureLocalTimeZone() async {
@@ -127,8 +127,8 @@ final BehaviorSubject<ReceivedNotification> didReceiveLocalNotificationSubject =
 final BehaviorSubject<String> selectNotificationSubject =
     BehaviorSubject<String>();
 
-class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
+class MathApp extends StatelessWidget {
+  MathApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -33,7 +33,7 @@ class HomeItem extends StatelessWidget {
               },
               child: Container(
                 margin: EdgeInsets.only(
-                  bottom: 23.h,
+                  bottom: 22.h,
                   right: horSpace,
                   left: horSpace,
                 ),

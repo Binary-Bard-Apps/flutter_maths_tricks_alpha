@@ -234,8 +234,13 @@ setScreenSize(
   ScreenUtil.init(context, designSize: Size(414, 1106));
 }
 
-getHeaderTitle(String s, BuildContext context) {
+getHeaderTitleOne(String s, BuildContext context) {
   return getCustomFont(s, 22, Colors.white, 1, fontWeight: FontWeight.w700);
+}
+
+getHeaderTitleTwo(String s, BuildContext context) {
+  return getCustomFont(s, 22, Color.fromARGB(255, 2, 2, 2), 1,
+      fontWeight: FontWeight.w700);
 }
 
 getSettingIcon(BuildContext context, {Color? color, bool? isWhite}) {

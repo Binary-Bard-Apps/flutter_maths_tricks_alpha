@@ -292,13 +292,13 @@ class _ReminderPage extends State<ReminderPage> {
 
     await flutterLocalNotificationsPlugin.zonedSchedule(
         id,
-        'Maths Trick',
+        'Math Matics',
         '',
         _nextInstanceOfMondayTenAM(day),
         const NotificationDetails(
           android: AndroidNotificationDetails('com.example.flutter_maths_trick',
               'com.example.flutter_maths_trick channel',
-              channelDescription: 'Maths Trick'),
+              channelDescription: 'Math Matics'),
         ),
         androidAllowWhileIdle: true,
         uiLocalNotificationDateInterpretation:

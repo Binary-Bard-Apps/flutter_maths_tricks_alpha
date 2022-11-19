@@ -35,8 +35,17 @@ class _HomePage extends State<HomePage> {
                         Row(
                           children: [
                             Expanded(
-                              child: getHeaderTitle("Maths Table", context),
                               flex: 1,
+                              child: Row(children: [
+                                SizedBox(
+                                  child: getHeaderTitleOne("Math", context),
+                                  // flex: 1,
+                                ),
+                                SizedBox(
+                                  child: getHeaderTitleTwo(" Matics", context),
+                                  // flex: 1,
+                                ),
+                              ]),
                             ),
                             getSettingIcon(context),
                           ],

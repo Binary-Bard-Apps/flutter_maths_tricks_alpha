@@ -57,7 +57,7 @@ class _SplashWidget extends State<SplashWidget> {
                       height: 130.h,
                     ),
                     15.verticalSpace,
-                    getCustomFont('Math Tricks', 30, Colors.black, 2,
+                    getCustomFont('Math Matics', 30, Colors.black, 2,
                         fontWeight: FontWeight.w600, font: 'RedRose')
                   ],
                 ),
