@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_maths_tricks/app/key_util.dart';
@@ -7,6 +8,7 @@ import 'package:flutter_maths_tricks/theme/color_scheme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+import '../../login.dart';
 import '../../provider/setting_controller.dart';
 import '../../utils/util.dart';
 import '../common/common.dart';
@@ -48,6 +50,17 @@ class _SettingPage extends State<SettingPage> with TickerProviderStateMixin {
                 Expanded(
                     child: ListView(
                   children: [
+                    IconButton(
+                      icon: const Icon(Icons.logout),
+                      onPressed: () async {
+                        await FirebaseAuth.instance.signOut();
+                        Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const LoginScreen()),
+                            (route) => false);
+                      },
+                    ),
                     Obx(() {
                       return getSwitchItem(
                           context: context,
