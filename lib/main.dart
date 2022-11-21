@@ -5,8 +5,13 @@ import 'package:flutter_maths_tricks/app/app_routes.dart';
 import 'package:flutter_maths_tricks/app/key_util.dart';
 import 'package:flutter_maths_tricks/data/hive_data.dart';
 import 'package:flutter_maths_tricks/theme/app_theme.dart';
+import 'package:flutter_maths_tricks/theme/color_scheme.dart';
 import 'package:flutter_maths_tricks/theme/controller/theme_controller.dart';
+import 'package:flutter_maths_tricks/ui/common/common.dart';
+import 'package:flutter_maths_tricks/utils/util.dart';
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 
 import 'package:get/get.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -18,6 +23,7 @@ import 'package:timezone/timezone.dart' as tz;
 
 /// Login ///
 import 'dart:async';
+import 'package:flutter_maths_tricks/ui/splash/splash_widget.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'login.dart';
@@ -122,18 +128,65 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
     startTimer();
+    navigateUser();
+
+    // SplashWidget;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("assets/s-icon.jpg"), fit: BoxFit.fitWidth),
+      appBar: getNoneAppBar(context, color: Colors.white),
+      backgroundColor: getBackgroundColor(context),
+      body: SafeArea(
+        child: Container(
+          height: double.infinity,
+          width: double.infinity,
+          child: Stack(
+            // add 400.h
+            children: [
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Image.asset('${assetPath}mask_group.png',
+                    height: 400, width: double.infinity, fit: BoxFit.fill),
+              ),
+              Positioned.fill(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(
+                      '${assetPath}splash.svg',
+                      height: 130, // add 130.h
+                    ),
+                    // 15.verticalSpace,  // add 15.verticalSpace
+                    Text(
+                      'Math Tricks',
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
+                          fontFamily: 'RedRose'),
+                    )
+                    // getCustomFont('Math Matics', 30, Colors.black, 2,
+                    //     fontWeight: FontWeight.w600, font: 'RedRose')
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
+
+    // return Scaffold(
+    //   body: Container(
+    //     decoration: const BoxDecoration(
+    //       image: DecorationImage(
+    //           image: AssetImage("assets/s-icon.jpg"), fit: BoxFit.fitWidth),
+    //     ),
+    //   ),
+    // );
   }
 
   void startTimer() {
