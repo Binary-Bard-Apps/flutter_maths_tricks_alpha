@@ -172,20 +172,13 @@ class DataFile {
   static List<SubCategoryModel> getSubList_6() {
     List<SubCategoryModel> mainModelList = [];
 
-    mainModelList
-        .add(SubCategoryModel(title: '2\u207f', id: 74));
-    mainModelList
-        .add(SubCategoryModel(title: 'a²\na = 10 ~ 99', id: 75));
-    mainModelList
-        .add(SubCategoryModel(title: 'a²\na = 100 ~ 999', id: 76));
-    mainModelList
-        .add(SubCategoryModel(title: 'a²\na = 100 ~ 999', id: 77));
-    mainModelList
-        .add(SubCategoryModel(title: 'a²\na = 1000 ~ 9999', id: 78));
-    mainModelList
-        .add(SubCategoryModel(title: 'a³\na = 10 ~ 99', id: 79));
-    mainModelList
-        .add(SubCategoryModel(title: 'a³\na = 100 ~ 999', id: 80));
+    mainModelList.add(SubCategoryModel(title: '2\u207f', id: 74));
+    mainModelList.add(SubCategoryModel(title: 'a²\na = 10 ~ 99', id: 75));
+    mainModelList.add(SubCategoryModel(title: 'a²\na = 100 ~ 999', id: 76));
+    mainModelList.add(SubCategoryModel(title: 'a²\na = 100 ~ 999', id: 77));
+    mainModelList.add(SubCategoryModel(title: 'a²\na = 1000 ~ 9999', id: 78));
+    mainModelList.add(SubCategoryModel(title: 'a³\na = 10 ~ 99', id: 79));
+    mainModelList.add(SubCategoryModel(title: 'a³\na = 100 ~ 999', id: 80));
     mainModelList.add(SubCategoryModel(title: 'a⁴', id: 81));
     mainModelList.add(SubCategoryModel(title: 'a⁶', id: 82));
     mainModelList.add(SubCategoryModel(title: 'a⁹', id: 83));
