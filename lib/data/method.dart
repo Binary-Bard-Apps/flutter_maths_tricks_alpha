@@ -1072,10 +1072,8 @@ class Method {
     double n2 = 2;
     double nthRootValue = nthRoot(n1, n2);
     answer = toStringValue(((nthRootValue * 1000) / 1000).round());
-    question = getSupScript(n2.toInt()) +
-
-        '√' +
-        getSplitString(toStringValue(n1));
+    question =
+        getSupScript(n2.toInt()) + '√' + getSplitString(toStringValue(n1));
 
     addDoubleOption();
 
@@ -1088,11 +1086,8 @@ class Method {
     double nthRootValue = nthRoot(n1, n2);
     answer = toStringValue(((nthRootValue * 1000) / 1000).round());
 
-    question = getSupScript(n2.toInt()) +
-
-
-        '√' +
-        getSplitString(toStringValue(n1));
+    question =
+        getSupScript(n2.toInt()) + '√' + getSplitString(toStringValue(n1));
 
     return setTrickModel('');
   }
@@ -1102,9 +1097,8 @@ class Method {
     double n2 = 4;
     double nthRootValue = nthRoot(n1, n2);
     answer = toStringValue(((nthRootValue * 1000) / 1000).round());
-    question = getSupScript(n2.toInt())+
-        '√' +
-        getSplitString(toStringValue(n1));
+    question =
+        getSupScript(n2.toInt()) + '√' + getSplitString(toStringValue(n1));
     addDoubleOption();
     return setTrickModel('');
   }
@@ -1114,9 +1108,8 @@ class Method {
     double n2 = 6;
     double nthRootValue = nthRoot(n1, n2);
     answer = toStringValue(((nthRootValue * 1000) / 1000).round());
-    question =getSupScript(n2.toInt())+
-        '√' +
-        getSplitString(toStringValue(n1));
+    question =
+        getSupScript(n2.toInt()) + '√' + getSplitString(toStringValue(n1));
     addDoubleOption();
     return setTrickModel('');
   }
@@ -1126,9 +1119,8 @@ class Method {
     double n2 = 9;
     double nthRootValue = nthRoot(n1, n2);
     answer = toStringValue(((nthRootValue * 1000) / 1000).round());
-    question = getSupScript(n2.toInt())+
-        '√' +
-        getSplitString(toStringValue(n1));
+    question =
+        getSupScript(n2.toInt()) + '√' + getSplitString(toStringValue(n1));
     addDoubleOption();
     return setTrickModel('');
   }
@@ -1138,9 +1130,8 @@ class Method {
     double n2 = 5;
     double nthRootValue = nthRoot(n1, n2);
     answer = toStringValue(((nthRootValue * 1000) / 1000).round());
-    question = getSupScript(n2.toInt())+
-        '√' +
-        getSplitString(toStringValue(n1));
+    question =
+        getSupScript(n2.toInt()) + '√' + getSplitString(toStringValue(n1));
     addDoubleOption();
     return setTrickModel('');
   }
