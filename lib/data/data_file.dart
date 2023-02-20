@@ -10,9 +10,9 @@ class DataFile {
         CategoryModel(title: 'Multiplication', icon: 'multiplication.svg'));
     list.add(CategoryModel(title: 'Division', icon: 'division.svg'));
     list.add(CategoryModel(title: 'Squaring', icon: 'square.svg'));
-    list.add(CategoryModel(title: 'Exponentiation', icon: 'square.svg'));
-    list.add(CategoryModel(title: 'Nth root', icon: 'square.svg'));
-    list.add(CategoryModel(title: 'Percentage', icon: 'square.svg'));
+    list.add(CategoryModel(title: 'Exponentiation', icon: 'power.svg'));
+    list.add(CategoryModel(title: 'Nth root', icon: 'square_root.svg'));
+    list.add(CategoryModel(title: 'Percentage', icon: 'percent.svg'));
 
     return list;
   }
