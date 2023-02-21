@@ -70,7 +70,8 @@ class QuizProvider extends TimeProvider with WidgetsBindingObserver {
   Future<List<TrickModel>> getQuizList() async {
     List<TrickModel> quizList = [];
     for (int i = 0; i < DEFAULT_QUESTION; i++) {
-      TrickModel trickModel = Method().getDataFromId(dummyModel.formulaId);
+      TrickModel trickModel =
+          Method().getDataFromId(dummyModel.formulaId, dummyModel.levelNo);
       debugPrint("The current formula id is ");
       print(dummyModel.formulaId);
       debugPrint("The current level is");

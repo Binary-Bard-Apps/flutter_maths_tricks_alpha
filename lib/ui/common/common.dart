@@ -300,6 +300,34 @@ getSvgIcon(
   );
 }
 
+getTrueFalseButton(
+    {required String icon,
+    bool? isHomeIcon,
+    required double height,
+    double? width,
+    Color? color,
+    Function? function}) {
+  return GestureDetector(
+    child: Container(
+      height: height,
+      // margin: EdgeInsets.only(top: 140.h),
+      decoration: getDefaultDecoration(bgColor: color, radius: 20.r),
+      alignment: Alignment.center,
+      child: SvgPicture.asset(
+        isHomeIcon == null ? '${assetPath}$icon' : '${assetHomeIcons}$icon',
+        height: height.h,
+        width: width == null ? null : width.w,
+        color: color == null ? null : color,
+      ),
+    ),
+    onTap: () {
+      if (function != null) {
+        function();
+      }
+    },
+  );
+}
+
 getDivider({double? height}) {
   return Container(
       height: height == null ? 0.8 : height,
