@@ -39,7 +39,7 @@ class KeyboardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     int _crossAxisCount = 4;
-    double height = MediaQuery.of(context).size.width / 6.5;
+    double height = MediaQuery.of(context).size.width / 5;
 
     double _crossAxisSpacing = 20.h;
     var widthItem = (MediaQuery.of(context).size.width -

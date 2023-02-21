@@ -123,8 +123,16 @@ class Method {
   }
 
   TrickModel method3() {
-    n1 = getRandomNumber(80, 10);
-    n2 = getRandomNumber(50, 10);
+    int ul_one = (level + level) * getRandomNumber(50, 41);
+    int ul_two = (level + level) * getRandomNumber(40, 31);
+    int ll_one = (level + level) * getRandomNumber(30, 25);
+    int ll_two = (level + level) * getRandomNumber(29, 14);
+    // n1 = getRandomNumber(120, 50);
+    // n2 = getRandomNumber(150, 80);
+    n1 = getRandomNumber(ul_one, ll_one);
+    n2 = getRandomNumber(ul_two, ll_two);
+    // n1 = getRandomNumber(80, 10);
+    // n2 = getRandomNumber(50, 10);
     answer = toStringValue((n1 - n2));
     addIntOption();
     question = toStringValue(n1) + space + subSign + space + toStringValue(n2);
