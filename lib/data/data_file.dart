@@ -108,22 +108,22 @@ class DataFile {
     List<SubCategoryModel> mainModelList = [];
 
     mainModelList.add(SubCategoryModel(title: 'Division', id: 40));
-    mainModelList.add(SubCategoryModel(title: 'Divide by 5', id: 41));
-    mainModelList.add(SubCategoryModel(title: 'Divide by 4', id: 42));
-    mainModelList.add(SubCategoryModel(title: 'Divide by 20', id: 43));
-    mainModelList.add(SubCategoryModel(title: 'Divide by 50', id: 44));
-    mainModelList.add(SubCategoryModel(title: 'Divide by 25', id: 45));
-    mainModelList.add(SubCategoryModel(title: 'Divide by 40', id: 46));
-    mainModelList.add(SubCategoryModel(title: 'Divide by 0.5', id: 47));
     mainModelList.add(SubCategoryModel(title: 'Divide by 0.2', id: 48));
     mainModelList.add(SubCategoryModel(title: 'Divide by 0.25', id: 49));
-    mainModelList.add(SubCategoryModel(title: 'Divide by 0.15', id: 50));
-    mainModelList.add(SubCategoryModel(title: 'Divide by 6', id: 51));
-    mainModelList.add(SubCategoryModel(title: 'Divide by 3', id: 52));
+    mainModelList.add(SubCategoryModel(title: 'Divide by 0.5', id: 47));
     mainModelList.add(SubCategoryModel(title: 'Divide by 2', id: 53));
-    mainModelList.add(SubCategoryModel(title: 'Divide by 8', id: 54));
+    mainModelList.add(SubCategoryModel(title: 'Divide by 3', id: 52));
+    mainModelList.add(SubCategoryModel(title: 'Divide by 4', id: 42));
+    mainModelList.add(SubCategoryModel(title: 'Divide by 5', id: 41));
+    mainModelList.add(SubCategoryModel(title: 'Divide by 6', id: 51));
     mainModelList.add(SubCategoryModel(title: 'Divide by 7', id: 55));
+    mainModelList.add(SubCategoryModel(title: 'Divide by 8', id: 54));
     mainModelList.add(SubCategoryModel(title: 'Divide by 9', id: 56));
+    mainModelList.add(SubCategoryModel(title: 'Divide by 15', id: 50));
+    mainModelList.add(SubCategoryModel(title: 'Divide by 20', id: 43));
+    mainModelList.add(SubCategoryModel(title: 'Divide by 25', id: 45));
+    mainModelList.add(SubCategoryModel(title: 'Divide by 40', id: 46));
+    mainModelList.add(SubCategoryModel(title: 'Divide by 50', id: 44));
 
     return mainModelList;
   }

@@ -740,6 +740,7 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Division by 5
   TrickModel method41() {
     double n1 = getRandomNumber(500, 10).toDouble();
     double n2 = 5;
@@ -753,6 +754,7 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Divide by 4
   TrickModel method42() {
     double n1 = getRandomNumber(500, 10).toDouble();
     double n2 = 4;
@@ -766,6 +768,7 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Divide by 20
   TrickModel method43() {
     double n1 = getRandomNumber(500, 10).toDouble();
     double n2 = 20;
@@ -779,6 +782,7 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Divide by 50
   TrickModel method44() {
     double n1 = getRandomNumber(500, 10).toDouble();
     double n2 = 50;
@@ -792,6 +796,7 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Divide by 25
   TrickModel method45() {
     double n1 = getRandomNumber(500, 10).toDouble();
     double n2 = 25;
@@ -805,6 +810,7 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Divide by 40
   TrickModel method46() {
     double n1 = getRandomNumber(500, 10).toDouble();
     double n2 = 40;
@@ -818,6 +824,7 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Divide by 0.5
   TrickModel method47() {
     double n1 = getRandomNumber(500, 10).toDouble();
     double n2 = 0.5;
@@ -831,6 +838,7 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Divide by 0.2
   TrickModel method48() {
     double n1 = getRandomNumber(500, 10).toDouble();
     double n2 = 0.2;
@@ -844,6 +852,7 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Divide by 0.25
   TrickModel method49() {
     double n1 = getRandomNumber(500, 10).toDouble();
     double n2 = 0.25;
@@ -857,6 +866,7 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Divide by 15
   TrickModel method50() {
     double n1 = getRandomNumber(500, 10).toDouble();
     double n2 = 15;
