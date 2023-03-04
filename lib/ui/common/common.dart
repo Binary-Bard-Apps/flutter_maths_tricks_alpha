@@ -649,6 +649,7 @@ commonTextFiled(TextEditingController textEditingController,
       borderSide: BorderSide(color: getFontColor(context), width: 0.2));
   return Container(
     child: AutoSizeTextField(
+      // minFontSize: 16,
       controller: textEditingController,
       autofocus: true,
       enabled: false,
