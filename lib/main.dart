@@ -135,7 +135,7 @@ class MyApp extends StatelessWidget {
     return GetBuilder<ThemeController>(
       builder: (controller) {
         return GetMaterialApp(
-          title: 'Math Trick',
+          title: 'Math Trick App',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.theme,
           darkTheme: AppTheme.darkTheme,

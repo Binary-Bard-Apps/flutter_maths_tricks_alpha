@@ -35,7 +35,8 @@ class _HomePage extends State<HomePage> {
                         Row(
                           children: [
                             Expanded(
-                              child: getHeaderTitle("Maths Table", context),
+                              child:
+                                  getHeaderTitle("Maths Tricks App", context),
                               flex: 1,
                             ),
                             getSettingIcon(context),
@@ -43,7 +44,8 @@ class _HomePage extends State<HomePage> {
                         ),
                         10.verticalSpace,
                         getCustomFont(
-                            'Learn Basic Math : Arithmetic Operations',
+                            'Learn Maths Skills With Fun & Easy Tricks',
+                            // 'Learn Basic Math : Arithmetic Operations',
                             14,
                             Colors.white,
                             2,

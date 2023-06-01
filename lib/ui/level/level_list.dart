@@ -15,12 +15,14 @@ class LevelList extends StatelessWidget {
   final DummyModel dummyModel;
   final AnimationController animationController;
   final ColorModel color;
-
-  LevelList(
-      {required this.list,
-      required this.animationController,
-      required this.color,
-      required this.dummyModel});
+  final bool isLevelUnlocked; // Addone
+  LevelList({
+    required this.list,
+    required this.animationController,
+    required this.color,
+    required this.dummyModel,
+    required this.isLevelUnlocked,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +54,8 @@ class LevelList extends StatelessWidget {
           ),
         );
         animationController.forward();
-
+        final bool isCurrentLevelUnlocked =
+            isLevelUnlocked || index == 0; // Addone
         DataModel dataModel = list[index];
         return buildAnimatedItem(
             context,
@@ -101,17 +104,27 @@ class LevelList extends StatelessWidget {
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                        )
+                        ),
+                        if (!isCurrentLevelUnlocked) // Add this condition
+                          Icon(
+                            Icons.lock,
+                            color: Colors.black.withOpacity(0.2),
+                            size: 20.sp,
+                          ),
                       ],
                     )
                   ],
                 ),
               ),
               onTap: () {
-                dummyModel.dataModel = dataModel;
-                dummyModel.levelNo = dataModel.level_no!;
-                Get.toNamed(KeyUtil.quizPage,
-                    arguments: Tuple2(dummyModel, color));
+                if (isCurrentLevelUnlocked) {
+                  dummyModel.dataModel = dataModel;
+                  dummyModel.levelNo = dataModel.level_no!;
+                  Get.toNamed(KeyUtil.quizPage,
+                      arguments: Tuple2(dummyModel, color));
+                } else if (index == 0) {
+                  // Perform any action or show a message indicating that the level is locked
+                }
               },
             ));
       }),

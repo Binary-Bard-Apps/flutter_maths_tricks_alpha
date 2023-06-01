@@ -26,6 +26,7 @@ class LevelWidget extends StatefulWidget {
 }
 
 class _LevelWidget extends State<LevelWidget> with TickerProviderStateMixin {
+  bool isLevelUnlocked = false; // Addone
   AnimationController? animationController;
 
   onBack() {
@@ -109,6 +110,8 @@ class _LevelWidget extends State<LevelWidget> with TickerProviderStateMixin {
                                       list: levelController.dataList,
                                       animationController: animationController!,
                                       color: tuple3,
+                                      isLevelUnlocked:
+                                          isLevelUnlocked, // Addone
                                     );
                                   }
                                 }),
