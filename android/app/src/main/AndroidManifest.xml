@@ -47,7 +47,7 @@
            android:value="ca-app-pub-3940256099942544~3347511713"/>
 
         <activity
-            android:showWhenLocked="true"
+            android:showWhenLocked="false"
             android:turnScreenOn="true"
 
             android:name=".MainActivity"

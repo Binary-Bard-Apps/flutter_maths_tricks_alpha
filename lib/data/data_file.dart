@@ -107,6 +107,24 @@ class DataFile {
   static List<SubCategoryModel> getSubList_4() {
     List<SubCategoryModel> mainModelList = [];
 
+    // mainModelList.add(SubCategoryModel(title: 'Division', id: 40));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 0.2', id: 41));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 0.25', id: 42));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 0.5', id: 43));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 2', id: 44));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 3', id: 45));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 4', id: 46));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 5', id: 47));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 6', id: 48));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 7', id: 49));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 8', id: 50));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 9', id: 51));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 15', id: 52));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 20', id: 53));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 25', id: 54));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 40', id: 55));
+    // mainModelList.add(SubCategoryModel(title: 'Divide by 50', id: 56));
+
     mainModelList.add(SubCategoryModel(title: 'Division', id: 40));
     mainModelList.add(SubCategoryModel(title: 'Divide by 0.2', id: 48));
     mainModelList.add(SubCategoryModel(title: 'Divide by 0.25', id: 49));
@@ -133,38 +151,51 @@ class DataFile {
 
     mainModelList
         .add(SubCategoryModel(title: 'Square numbers ending in 5', id: 57));
-    mainModelList.add(
-        SubCategoryModel(title: 'Square numbers between 90 and 99', id: 58));
-    mainModelList.add(
-        SubCategoryModel(title: 'Square numbers between 50 and 59', id: 59));
-    mainModelList.add(
-        SubCategoryModel(title: 'Square numbers between 40 and 49', id: 60));
-    mainModelList.add(
-        SubCategoryModel(title: 'Square numbers between 100 and 109', id: 61));
+
+    mainModelList
+        .add(SubCategoryModel(title: 'Square numbers ending in 05', id: 71));
+
+    mainModelList
+        .add(SubCategoryModel(title: 'Square numbers ending in 15', id: 72));
+
     mainModelList.add(
         SubCategoryModel(title: 'Square numbers between 10 and 19', id: 62));
+
     mainModelList
         .add(SubCategoryModel(title: 'Square numbers ending in 25', id: 63));
+
     mainModelList.add(
         SubCategoryModel(title: 'Square numbers between 20 and 29', id: 64));
+
     mainModelList.add(
         SubCategoryModel(title: 'Square numbers between 30 and 39', id: 65));
+
+    mainModelList.add(
+        SubCategoryModel(title: 'Square numbers between 40 and 49', id: 60));
+
+    mainModelList.add(
+        SubCategoryModel(title: 'Square numbers between 50 and 59', id: 59));
+
     mainModelList.add(
         SubCategoryModel(title: 'Square numbers between 60 and 69', id: 66));
+
+    mainModelList
+        .add(SubCategoryModel(title: 'Square numbers ending in 75', id: 69));
     mainModelList.add(
         SubCategoryModel(title: 'Square numbers between 70 and 79', id: 67));
     mainModelList.add(
         SubCategoryModel(title: 'Square numbers between 80 and 89', id: 68));
     mainModelList
-        .add(SubCategoryModel(title: 'Square numbers ending in 75', id: 69));
+        .add(SubCategoryModel(title: 'Square numbers ending in 95', id: 73));
+
+    mainModelList.add(
+        SubCategoryModel(title: 'Square numbers between 90 and 99', id: 58));
+
+    mainModelList.add(
+        SubCategoryModel(title: 'Square numbers between 100 and 109', id: 61));
+
     mainModelList
         .add(SubCategoryModel(title: 'Square numbers ending in 125', id: 70));
-    mainModelList
-        .add(SubCategoryModel(title: 'Square numbers ending in 05', id: 71));
-    mainModelList
-        .add(SubCategoryModel(title: 'Square numbers ending in 15', id: 72));
-    mainModelList
-        .add(SubCategoryModel(title: 'Square numbers ending in 95', id: 73));
 
     return mainModelList;
   }
@@ -173,15 +204,15 @@ class DataFile {
     List<SubCategoryModel> mainModelList = [];
 
     mainModelList.add(SubCategoryModel(title: '2\u207f', id: 74));
-    mainModelList.add(SubCategoryModel(title: 'a²\na = 10 ~ 99', id: 75));
+    mainModelList.add(SubCategoryModel(title: 'a\u00B2\na = 10 ~ 99', id: 75));
+    // mainModelList.add(SubCategoryModel(title: 'a²\na = 100 ~ 999', id: 76));
     mainModelList.add(SubCategoryModel(title: 'a²\na = 100 ~ 999', id: 76));
-    mainModelList.add(SubCategoryModel(title: 'a²\na = 100 ~ 999', id: 77));
-    mainModelList.add(SubCategoryModel(title: 'a²\na = 1000 ~ 9999', id: 78));
-    mainModelList.add(SubCategoryModel(title: 'a³\na = 10 ~ 99', id: 79));
-    mainModelList.add(SubCategoryModel(title: 'a³\na = 100 ~ 999', id: 80));
-    mainModelList.add(SubCategoryModel(title: 'a⁴', id: 81));
-    mainModelList.add(SubCategoryModel(title: 'a⁶', id: 82));
-    mainModelList.add(SubCategoryModel(title: 'a⁹', id: 83));
+    mainModelList.add(SubCategoryModel(title: 'a²\na = 1000 ~ 9999', id: 77));
+    mainModelList.add(SubCategoryModel(title: 'a³\na = 10 ~ 99', id: 78));
+    mainModelList.add(SubCategoryModel(title: 'a³\na = 100 ~ 999', id: 79));
+    mainModelList.add(SubCategoryModel(title: 'a⁴', id: 80));
+    mainModelList.add(SubCategoryModel(title: 'a⁶', id: 81));
+    mainModelList.add(SubCategoryModel(title: 'a⁹', id: 82));
 
     return mainModelList;
   }
@@ -189,12 +220,13 @@ class DataFile {
   static List<SubCategoryModel> getSubList_7() {
     List<SubCategoryModel> mainModelList = [];
 
-    mainModelList.add(SubCategoryModel(title: '²√a', id: 84));
-    mainModelList.add(SubCategoryModel(title: '³√a', id: 85));
-    mainModelList.add(SubCategoryModel(title: '⁴√a', id: 86));
-    mainModelList.add(SubCategoryModel(title: '⁶√a', id: 87));
-    mainModelList.add(SubCategoryModel(title: '⁹√a', id: 88));
-    mainModelList.add(SubCategoryModel(title: '⁵√a', id: 89));
+    mainModelList.add(SubCategoryModel(title: '²√a', id: 83));
+    mainModelList.add(SubCategoryModel(title: '³√a', id: 84));
+    mainModelList.add(SubCategoryModel(title: '⁴√a', id: 85));
+    mainModelList.add(SubCategoryModel(title: '⁵√a', id: 88));
+
+    mainModelList.add(SubCategoryModel(title: '⁶√a', id: 86));
+    mainModelList.add(SubCategoryModel(title: '⁹√a', id: 87));
 
     return mainModelList;
   }
@@ -202,24 +234,24 @@ class DataFile {
   static List<SubCategoryModel> getSubList_8() {
     List<SubCategoryModel> mainModelList = [];
 
-    mainModelList.add(SubCategoryModel(title: 'Calculate a Tip -1-', id: 90));
-    mainModelList.add(SubCategoryModel(title: 'Calculate a Tip -2-', id: 91));
-    mainModelList.add(SubCategoryModel(title: '50%', id: 92));
-    mainModelList.add(SubCategoryModel(title: '25%', id: 93));
-    mainModelList.add(SubCategoryModel(title: '20%', id: 94));
-    mainModelList.add(SubCategoryModel(title: '15%', id: 95));
-    mainModelList.add(SubCategoryModel(title: '5%', id: 96));
-    mainModelList.add(SubCategoryModel(title: '4%', id: 97));
-    mainModelList.add(SubCategoryModel(title: '2%', id: 98));
-    mainModelList.add(SubCategoryModel(title: '0.5%', id: 99));
-    mainModelList.add(SubCategoryModel(title: '150%', id: 100));
-    mainModelList.add(SubCategoryModel(title: '200%', id: 101));
-    mainModelList.add(SubCategoryModel(title: '250%', id: 102));
-    mainModelList.add(SubCategoryModel(title: '300%', id: 103));
-    mainModelList.add(SubCategoryModel(title: '500%', id: 104));
-    mainModelList.add(SubCategoryModel(title: '75%', id: 105));
-    mainModelList.add(SubCategoryModel(title: '750%', id: 106));
-    mainModelList.add(SubCategoryModel(title: '40%', id: 107));
+    mainModelList.add(SubCategoryModel(title: 'Calculate a Tip -1', id: 90));
+    mainModelList.add(SubCategoryModel(title: 'Calculate a Tip -2', id: 89));
+    mainModelList.add(SubCategoryModel(title: '0.5%', id: 98));
+    mainModelList.add(SubCategoryModel(title: '2%', id: 97));
+    mainModelList.add(SubCategoryModel(title: '4%', id: 96));
+    mainModelList.add(SubCategoryModel(title: '5%', id: 95));
+    mainModelList.add(SubCategoryModel(title: '15%', id: 94));
+    mainModelList.add(SubCategoryModel(title: '20%', id: 93));
+    mainModelList.add(SubCategoryModel(title: '25%', id: 92));
+    mainModelList.add(SubCategoryModel(title: '40%', id: 106));
+    mainModelList.add(SubCategoryModel(title: '50%', id: 91));
+    mainModelList.add(SubCategoryModel(title: '75%', id: 104));
+    mainModelList.add(SubCategoryModel(title: '150%', id: 99));
+    mainModelList.add(SubCategoryModel(title: '200%', id: 100));
+    mainModelList.add(SubCategoryModel(title: '250%', id: 101));
+    mainModelList.add(SubCategoryModel(title: '300%', id: 102));
+    mainModelList.add(SubCategoryModel(title: '500%', id: 103));
+    mainModelList.add(SubCategoryModel(title: '750%', id: 105));
 
     return mainModelList;
   }
