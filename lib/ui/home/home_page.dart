@@ -35,7 +35,7 @@ class _HomePage extends State<HomePage> {
                         Row(
                           children: [
                             Expanded(
-                              child: getHeaderTitle("Maths Table", context),
+                              child: getHeaderTitle("Maths Tricks", context),
                               flex: 1,
                             ),
                             getSettingIcon(context),
