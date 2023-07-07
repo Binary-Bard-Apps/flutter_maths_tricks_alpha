@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_maths_tricks/data/data_file.dart';
-import 'package:flutter_maths_tricks/provider/level_controller.dart';
+import 'package:flutter_maths_tricks/controller/level_controller.dart';
 import 'package:flutter_maths_tricks/theme/color_scheme.dart';
 import 'package:flutter_maths_tricks/ui/level/level_list.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

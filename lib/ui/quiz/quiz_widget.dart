@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_maths_tricks/provider/quiz_provider.dart';
+import 'package:flutter_maths_tricks/controller/quiz_provider.dart';
 import 'package:flutter_maths_tricks/theme/color_scheme.dart';
 import 'package:flutter_maths_tricks/ui/dialog/quiz_exit_dialog.dart';
 

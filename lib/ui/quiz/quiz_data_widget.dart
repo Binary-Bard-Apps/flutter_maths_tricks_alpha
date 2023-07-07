@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_maths_tricks/provider/quiz_provider.dart';
+import 'package:flutter_maths_tricks/controller/quiz_provider.dart';
 import 'package:flutter_maths_tricks/theme/app_theme.dart';
 import 'package:flutter_maths_tricks/ui/common/common.dart';
 import 'package:flutter_maths_tricks/ui/quiz/content_widget.dart';

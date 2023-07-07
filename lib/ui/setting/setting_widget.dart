@@ -7,7 +7,7 @@ import 'package:flutter_maths_tricks/theme/color_scheme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../../provider/setting_controller.dart';
+import '../../controller/setting_controller.dart';
 import '../../utils/util.dart';
 import '../common/common.dart';
 import '../dialog/rate_dialog.dart';

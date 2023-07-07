@@ -5,7 +5,7 @@ import 'package:flutter_maths_tricks/utils/util.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../model/color_model.dart';
-import '../../../provider/quiz_provider.dart';
+import '../../../controller/quiz_provider.dart';
 import 'back_button.dart';
 import 'clear_button.dart';
 import 'number_button.dart';
