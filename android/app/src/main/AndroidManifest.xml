@@ -26,7 +26,7 @@
 
 
     <application
-        android:label="maths_tricks_alpah"
+        android:label="Math Pro "
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
 

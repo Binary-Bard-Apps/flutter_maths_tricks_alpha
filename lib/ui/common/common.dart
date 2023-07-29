@@ -1,10 +1,10 @@
 import 'package:auto_size_text_field/auto_size_text_field.dart';
+import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_maths_tricks/app/key_util.dart';
 import 'package:flutter_maths_tricks/main.dart';
-import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -328,9 +328,10 @@ getTrueFalseButton(
   );
 }
 
-getDivider({double? height}) {
+getDivider({double? height, double? width}) {
   return Container(
       height: height == null ? 0.8 : height,
+      width: width == null ? Get.width : width,
       color: themeController.isDarkTheme
           ? "#686767".toColor()
           : "#F4F4F4".toColor()
@@ -359,13 +360,18 @@ getBackSvgFromString(
   );
 }
 
-Widget getCustomFont(String text, double fontSize, Color fontColor, int maxLine,
-    {TextOverflow overflow = TextOverflow.ellipsis,
-    TextDecoration decoration = TextDecoration.none,
-    FontWeight fontWeight = FontWeight.normal,
-    TextAlign textAlign = TextAlign.start,
-    String? font,
-    txtHeight}) {
+Widget getCustomFont(
+  String text,
+  double fontSize,
+  Color fontColor,
+  int maxLine, {
+  TextOverflow overflow = TextOverflow.ellipsis,
+  TextDecoration decoration = TextDecoration.none,
+  FontWeight fontWeight = FontWeight.normal,
+  TextAlign textAlign = TextAlign.start,
+  String? font,
+  txtHeight,
+}) {
   return Text(
     text,
     overflow: overflow,

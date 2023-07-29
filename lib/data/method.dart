@@ -304,6 +304,7 @@ class Method {
     return setTrickModel(multiSign);
   }
 
+  // TODO: Make it suitable for different levels
 // Multiply numbers between 11 and 19
   TrickModel method12() {
     n1 = getRandomNumber(19, 11);
@@ -315,6 +316,7 @@ class Method {
     return setTrickModel(multiSign);
   }
 
+// TODO: Make it suitable for different levels
 // Multiply to digit numbers having same tens digit and ones digits' sum is 10
   TrickModel method13() {
     int number = getRandomNumber(8, 1);
@@ -742,9 +744,11 @@ class Method {
 
 // Division by 5
   TrickModel method41() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 =
+        (getRandomNumber(level * 25, level * 2) / 5).round() * 5.toDouble();
     double n2 = 5;
-    answer = toStringValue(((n1 / n2)));
+    answer = toStringValue(
+        n1 ~/ n2); // Using integer division (~/) to get the quotient
     addDoubleOption();
     question = getSplitString(toStringValue(n1)) +
         space +
@@ -756,7 +760,8 @@ class Method {
 
 // Divide by 4
   TrickModel method42() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 =
+        (getRandomNumber(level * 20, level * 2) / 4).round() * 4.toDouble();
     double n2 = 4;
     answer = toStringValue(((n1 / n2)));
     addDoubleOption();
@@ -770,7 +775,8 @@ class Method {
 
 // Divide by 20
   TrickModel method43() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 =
+        (getRandomNumber(level * 100, level * 50) / 20).round() * 20.toDouble();
     double n2 = 20;
     answer = toStringValue(((n1 / n2)));
     addDoubleOption();
@@ -784,7 +790,9 @@ class Method {
 
 // Divide by 50
   TrickModel method44() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 = (getRandomNumber(level * 250, level * 10) / 50).round() *
+        50.toDouble() *
+        50.toDouble();
     double n2 = 50;
     answer = toStringValue(((n1 / n2)));
     addDoubleOption();
@@ -798,7 +806,8 @@ class Method {
 
 // Divide by 25
   TrickModel method45() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 =
+        (getRandomNumber(level * 125, level * 60) / 25).round() * 25.toDouble();
     double n2 = 25;
     answer = toStringValue(((n1 / n2)));
     addDoubleOption();
@@ -812,7 +821,8 @@ class Method {
 
 // Divide by 40
   TrickModel method46() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 =
+        (getRandomNumber(level * 20, level * 10) / 40).round() * 40.toDouble();
     double n2 = 40;
     answer = toStringValue(((n1 / n2)));
     addDoubleOption();
@@ -826,7 +836,8 @@ class Method {
 
 // Divide by 0.5
   TrickModel method47() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 =
+        (getRandomNumber(level * 2, level * 1) / 0.5).round() * 0.5.toDouble();
     double n2 = 0.5;
     answer = toStringValue(((n1 / n2)));
     addDoubleOption();
@@ -840,7 +851,8 @@ class Method {
 
 // Divide by 0.2
   TrickModel method48() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 =
+        (getRandomNumber(level * 2, level * 1) / 0.2).round() * 0.2.toDouble();
     double n2 = 0.2;
     answer = toStringValue(((n1 / n2)));
     addDoubleOption();
@@ -854,7 +866,8 @@ class Method {
 
 // Divide by 0.25
   TrickModel method49() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 = (getRandomNumber(level * 2, level * 1) / 0.25).round() *
+        0.25.toDouble();
     double n2 = 0.25;
     answer = toStringValue(((n1 / n2)));
     addDoubleOption();
@@ -868,7 +881,8 @@ class Method {
 
 // Divide by 15
   TrickModel method50() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 =
+        (getRandomNumber(level * 75, level * 35) / 15).round() * 15.toDouble();
     double n2 = 15;
     answer = toStringValue(getFormatValue2(((n1 / n2))));
     addDoubleOption();
@@ -880,8 +894,10 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Divide by 6
   TrickModel method51() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 =
+        (getRandomNumber(level * 30, level * 15) / 6).round() * 6.toDouble();
     double n2 = 6;
     answer = toStringValue(((n1 / n2)));
     addDoubleOption();
@@ -893,8 +909,10 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Divide by 3
   TrickModel method52() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 =
+        (getRandomNumber(level * 15, level * 5) / 3).round() * 3.toDouble();
     double n2 = 3;
     answer = toStringValue(((n1 / n2)));
     addDoubleOption();
@@ -906,8 +924,10 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Divide by 2
   TrickModel method53() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 =
+        (getRandomNumber(level * 10, level * 5) / 2).round() * 2.toDouble();
     double n2 = 2;
     answer = toStringValue(((n1 / n2)));
     addDoubleOption();
@@ -919,8 +939,10 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Divide by 8
   TrickModel method54() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 =
+        (getRandomNumber(level * 40, level * 20) / 8).round() * 8.toDouble();
     double n2 = 8;
     answer = toStringValue(((n1 / n2)));
     addDoubleOption();
@@ -932,8 +954,10 @@ class Method {
     return setTrickModel(divSign);
   }
 
+  // Divide by 7
   TrickModel method55() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 =
+        (getRandomNumber(level * 35, level * 20) / 7).round() * 7.toDouble();
     double n2 = 7;
     answer = toStringValue(((n1 / n2)));
     addDoubleOption();
@@ -945,8 +969,10 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Divide by 9
   TrickModel method56() {
-    double n1 = getRandomNumber(500, 10).toDouble();
+    double n1 =
+        (getRandomNumber(level * 45, level * 20) / 9).round() * 9.toDouble();
     double n2 = 9;
     answer = toStringValue(((n1 / n2)));
     addDoubleOption();
@@ -958,8 +984,9 @@ class Method {
     return setTrickModel(divSign);
   }
 
+// Square ending with 5
   TrickModel method57() {
-    n1 = getRandomNumber(99, 2);
+    n1 = (getRandomNumber(level * 10, level * 1));
     n1 = int.parse(toStringValue(n1) + "5");
     answer = toStringValue(((n1 * n1)));
     addIntOption();
@@ -967,6 +994,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+// Square between 90 and 100
   TrickModel method58() {
     n1 = getRandomNumber(98, 91);
 

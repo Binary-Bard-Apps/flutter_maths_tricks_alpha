@@ -5,8 +5,8 @@ import 'package:flutter_maths_tricks/theme/color_scheme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_share/flutter_share.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:html_unescape/html_unescape.dart';
 import 'package:html/parser.dart' as html;
+import 'package:html_unescape/html_unescape.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 String fontFamily = "SFPRO";
@@ -26,7 +26,8 @@ String parseHtmlString(String htmlString) {
 }
 
 launchURL() async {
-  if (!await launchUrl(Uri.parse('https://www.google.com'))) {
+  if (!await launchUrl(Uri.parse(
+      'https://doc-hosting.flycricket.io/math-ticks-app-privacy-policy/72d6c77e-0e66-4ad0-875c-977c06fe7db4/privacy'))) {
     throw 'Could not launch ';
   }
 }

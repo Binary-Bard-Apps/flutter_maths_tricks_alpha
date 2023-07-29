@@ -31,87 +31,90 @@ class _SettingPage extends State<SettingPage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-        child: Scaffold(
-          appBar: getNoneAppBar(context, color: getBackgroundColor(context)),
-          body: SafeArea(
-            child: Column(
-              children: [
-                getCommonAppBar(
-                    context: context,
-                    function: () {
-                      onBack();
-                    },
-                    title: 'Setting',
-                    isSetting: true,
-                    color: tuple3.darkColor),
-                50.verticalSpace,
-                Expanded(
-                    child: ListView(
-                  children: [
-                    Obx(() {
-                      return getSwitchItem(
+        child: Semantics(
+          label: 'Setting Screen',
+          child: Scaffold(
+            appBar: getNoneAppBar(context, color: getBackgroundColor(context)),
+            body: SafeArea(
+              child: Column(
+                children: [
+                  getCommonAppBar(
+                      context: context,
+                      function: () {
+                        onBack();
+                      },
+                      title: 'Setting',
+                      isSetting: true,
+                      color: tuple3.darkColor),
+                  50.verticalSpace,
+                  Expanded(
+                      child: ListView(
+                    children: [
+                      Obx(() {
+                        return getSwitchItem(
+                            context: context,
+                            function: (value) {
+                              settingController.changeSoundValue(value);
+                            },
+                            title: 'Sound',
+                            value: settingController.isSound.value);
+                      }),
+                      Obx(() {
+                        return getSwitchItem(
+                            context: context,
+                            function: (value) {
+                              settingController.changeVibrationValue(value);
+                            },
+                            title: 'Vibration',
+                            value: settingController.isVibration.value);
+                      }),
+                      getSwitchItem(
                           context: context,
                           function: (value) {
-                            settingController.changeSoundValue(value);
+                            themeController.changeTheme();
                           },
-                          title: 'Sound',
-                          value: settingController.isSound.value);
-                    }),
-                    Obx(() {
-                      return getSwitchItem(
-                          context: context,
-                          function: (value) {
-                            settingController.changeVibrationValue(value);
-                          },
-                          title: 'Vibration',
-                          value: settingController.isVibration.value);
-                    }),
-                    getSwitchItem(
+                          title: 'Night Mode',
+                          value: themeController.isDarkTheme),
+                      getItem(
                         context: context,
-                        function: (value) {
-                          themeController.changeTheme();
+                        function: () {
+                          Get.toNamed(KeyUtil.reminderPage);
                         },
-                        title: 'Night Mode',
-                        value: themeController.isDarkTheme),
-                    getItem(
-                      context: context,
-                      function: () {
-                        Get.toNamed(KeyUtil.reminderPage);
-                      },
-                      title: 'Reminder',
-                    ),
-                    getItem(
-                      context: context,
-                      function: () {
-                        launchURL();
-                      },
-                      title: 'Privacy Policy',
-                    ),
-                    getItem(
-                      context: context,
-                      function: () {
-                        share();
-                      },
-                      title: 'Share',
-                    ),
-                    getItem(
-                      context: context,
-                      function: () {
-                        showCommonDialog(
-                            widget: RateViewDialog(), context: context);
-                      },
-                      title: 'Rate us',
-                    ),
-                    getItem(
-                      context: context,
-                      function: () {
-                        Get.toNamed(KeyUtil.feedbackPage);
-                      },
-                      title: 'Feedback',
-                    ),
-                  ],
-                )),
-              ],
+                        title: 'Reminder',
+                      ),
+                      getItem(
+                        context: context,
+                        function: () {
+                          launchURL();
+                        },
+                        title: 'Privacy Policy',
+                      ),
+                      getItem(
+                        context: context,
+                        function: () {
+                          share();
+                        },
+                        title: 'Share',
+                      ),
+                      getItem(
+                        context: context,
+                        function: () {
+                          showCommonDialog(
+                              widget: RateViewDialog(), context: context);
+                        },
+                        title: 'Rate us',
+                      ),
+                      getItem(
+                        context: context,
+                        function: () {
+                          Get.toNamed(KeyUtil.feedbackPage);
+                        },
+                        title: 'Feedback',
+                      ),
+                    ],
+                  )),
+                ],
+              ),
             ),
           ),
         ),

@@ -33,36 +33,39 @@ class _SplashWidget extends State<SplashWidget> {
     setScreenSize(
       context,
     );
-    return Scaffold(
-      appBar: getNoneAppBar(context, color: Colors.white),
-      backgroundColor: getBackgroundColor(context),
-      body: SafeArea(
-        child: Container(
-          height: double.infinity,
-          width: double.infinity,
-          child: Stack(
-            children: [
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Image.asset('${assetPath}mask_group.png',
-                    height: 400.h, width: double.infinity, fit: BoxFit.fill),
-              ),
-              Positioned.fill(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset(
-                      '${assetPath}splash.svg',
-                      height: 130.h,
-                    ),
-                    15.verticalSpace,
-                    getCustomFont('Math Tricks', 30, Colors.black, 2,
-                        fontWeight: FontWeight.w600, font: 'RedRose')
-                  ],
+    return Semantics(
+      label: "Splash Screen",
+      child: Scaffold(
+        appBar: getNoneAppBar(context, color: Colors.white),
+        backgroundColor: getBackgroundColor(context),
+        body: SafeArea(
+          child: Container(
+            height: double.infinity,
+            width: double.infinity,
+            child: Stack(
+              children: [
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Image.asset('${assetPath}mask_group.png',
+                      height: 400.h, width: double.infinity, fit: BoxFit.fill),
                 ),
-              )
-            ],
+                Positioned.fill(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        '${assetPath}splash.svg',
+                        height: 130.h,
+                      ),
+                      15.verticalSpace,
+                      getCustomFont('Math Tricks', 30, Colors.black, 2,
+                          fontWeight: FontWeight.w600, font: 'RedRose')
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

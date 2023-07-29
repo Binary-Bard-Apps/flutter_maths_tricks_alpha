@@ -3,9 +3,9 @@ import 'package:flutter_maths_tricks/app/app_store.dart';
 import 'package:flutter_maths_tricks/data/data_file.dart';
 import 'package:flutter_maths_tricks/theme/color_scheme.dart';
 import 'package:flutter_maths_tricks/ui/home/home_item.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../common/common.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -22,44 +22,48 @@ class _HomePage extends State<HomePage> {
     );
 
     return WillPopScope(
-        child: Scaffold(
-          appBar: getNoneAppBar(context, color: getAlphaPrimaryColor(context)),
-          body: SafeArea(
-            child: Stack(
-              children: [
-                getCommonHeader(context,
-                    widget: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Expanded(
-                              child: getHeaderTitle("Maths Tricks", context),
-                              flex: 1,
-                            ),
-                            getSettingIcon(context),
-                          ],
-                        ),
-                        10.verticalSpace,
-                        getCustomFont(
-                            'Learn Basic Math : Arithmetic Operations',
-                            14,
-                            Colors.white,
-                            2,
-                            fontWeight: FontWeight.w300)
-                      ],
-                    )),
-                Container(
-                  margin: EdgeInsets.only(top: 132.h),
-                  child: ListView.builder(
-                    itemCount: DataFile.getCategoryList().length,
-                    itemBuilder: (context, index) {
-                      return HomeItem(index: index);
-                    },
-                  ),
-                )
-              ],
+        child: Semantics(
+          label: 'Home Screen',
+          child: Scaffold(
+            appBar:
+                getNoneAppBar(context, color: getAlphaPrimaryColor(context)),
+            body: SafeArea(
+              child: Stack(
+                children: [
+                  getCommonHeader(context,
+                      widget: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Expanded(
+                                child: getHeaderTitle("Maths Tricks", context),
+                                flex: 1,
+                              ),
+                              getSettingIcon(context),
+                            ],
+                          ),
+                          10.verticalSpace,
+                          getCustomFont(
+                              'Learn Basic Math : Arithmetic Operations',
+                              14,
+                              Colors.white,
+                              2,
+                              fontWeight: FontWeight.w300)
+                        ],
+                      )),
+                  Container(
+                    margin: EdgeInsets.only(top: 132.h),
+                    child: ListView.builder(
+                      itemCount: DataFile.getCategoryList().length,
+                      itemBuilder: (context, index) {
+                        return HomeItem(index: index);
+                      },
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),

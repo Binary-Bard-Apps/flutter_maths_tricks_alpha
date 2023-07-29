@@ -14,7 +14,7 @@ import '../data/data_file.dart';
 import '../data/hive_data.dart';
 import '../data/method.dart';
 import '../model/color_model.dart';
-import '../provider/timer_provider.dart';
+import '../controller/timer_provider.dart';
 import '../sound/audio_file.dart';
 import '../ui/common/common.dart';
 import '../ui/dialog/game_over_dialog.dart';

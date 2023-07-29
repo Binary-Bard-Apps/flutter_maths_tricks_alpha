@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:flutter_maths_tricks/ui/common/common.dart';
@@ -8,11 +7,6 @@ import 'package:get/get.dart';
 
 import '../../model/color_model.dart';
 import '../../theme/color_scheme.dart';
-
-
-
-
-
 
 class FeedbackScreen extends StatefulWidget {
   const FeedbackScreen({Key? key}) : super(key: key);
@@ -30,19 +24,16 @@ class _FeedbackScreen extends State<FeedbackScreen> {
 
   ValueNotifier darkMode = ValueNotifier(false);
 
-
-  double rate=0;
+  double rate = 0;
   @override
   void initState() {
     super.initState();
-
 
     getSpeakerVol();
   }
 
   getSpeakerVol() async {
-
-    Future.delayed(Duration.zero,(){
+    Future.delayed(Duration.zero, () {
       darkMode.value = Theme.of(context).brightness != Brightness.light;
     });
   }
@@ -53,28 +44,18 @@ class _FeedbackScreen extends State<FeedbackScreen> {
 
   @override
   Widget build(BuildContext context) {
-    
     int selection = 1;
 
-
-
-
-
-
-
-    EdgeInsets edgeInsets = EdgeInsets.symmetric(
-        horizontal: horSpace);
+    EdgeInsets edgeInsets = EdgeInsets.symmetric(horizontal: horSpace);
     double starSize = 60.h;
 
     return WillPopScope(
       child: Scaffold(
         appBar: getNoneAppBar(context),
-
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               getCommonAppBar(
                   context: context,
                   function: () {
@@ -83,32 +64,25 @@ class _FeedbackScreen extends State<FeedbackScreen> {
                   title: '',
                   isSetting: true,
                   color: tuple3.darkColor),
-
-
               buildExpandedData(edgeInsets, starSize, selection, context),
-              
-              
-              getCommonButton(title: 'Submit Feedback', function: () async {
+              getCommonButton(
+                  title: 'Submit Feedback',
+                  function: () async {
+                    if (rate >= 3) {
+                      String feedback = "";
 
-                if(rate >= 3) {
-                  String feedback = "";
+                      if (feedbackController.value.text.isNotEmpty) {
+                        feedback = feedbackController.text.toString();
+                      }
 
-                  if (feedbackController.value.text.isNotEmpty) {
-                    feedback = feedbackController.text.toString();
-                  }
-
-                  final Email email = Email(
-                    body: feedback,
-                    subject: 'App Feedback',
-                    isHTML: false,
-                  );
-                  await FlutterEmailSender.send(email);
-                }
-              })
-              
-              
-              
-
+                      final Email email = Email(
+                        body: feedback,
+                        subject: 'App Feedback',
+                        isHTML: false,
+                      );
+                      await FlutterEmailSender.send(email);
+                    }
+                  })
             ],
           ),
         ),
@@ -119,15 +93,12 @@ class _FeedbackScreen extends State<FeedbackScreen> {
       },
     );
   }
+
   TextEditingController feedbackController = TextEditingController();
-
-
-
 
   Expanded buildExpandedData(EdgeInsets edgeInsets, double starSize,
       int selection, BuildContext context) {
-
-    Color fontColor= Theme.of(context).textTheme.subtitle2!.color!;
+    Color fontColor = Theme.of(context).textTheme.subtitle2!.color!;
     return Expanded(
       child: ListView(
         shrinkWrap: true,
@@ -146,8 +117,7 @@ class _FeedbackScreen extends State<FeedbackScreen> {
           30.verticalSpace,
           RatingBar(
               itemCount: 5,
-              itemPadding: EdgeInsets.symmetric(
-                  horizontal: (horSpace/2)),
+              itemPadding: EdgeInsets.symmetric(horizontal: (horSpace / 2)),
               allowHalfRating: false,
               itemSize: starSize,
               initialRating: 0,
@@ -163,27 +133,19 @@ class _FeedbackScreen extends State<FeedbackScreen> {
               ),
               onRatingUpdate: (rating) {
                 setState(() {
-
                   rate = rating;
                 });
-
               }),
           70.verticalSpace,
           getCustomFont("Tell us what can be improved!", 16, fontColor, 1,
-              fontWeight: FontWeight.w500
-          ),
+              fontWeight: FontWeight.w500),
           30.verticalSpace,
           getDefaultTextFiled(context, "Write your feedback...",
-              feedbackController, fontColor, Colors.grey,
+              feedbackController, fontColor, Colors.black,
               minLines: true)
         ],
       ),
       flex: 1,
     );
   }
-
-
-
-
 }
-
