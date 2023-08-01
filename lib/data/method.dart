@@ -1,6 +1,8 @@
 import 'dart:collection';
+import 'dart:developer';
 import 'dart:math' as math;
 
+import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:get/get.dart';
 
 import '../model/trick_model.dart';
@@ -1004,6 +1006,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+  // Square between 40 and 50
   TrickModel method59() {
     n1 = getRandomNumber(58, 51);
     answer = toStringValue(((n1 * n1)));
@@ -1012,6 +1015,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+// Square between 40 and 50
   TrickModel method60() {
     n1 = getRandomNumber(48, 41);
     answer = toStringValue(((n1 * n1)));
@@ -1020,6 +1024,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+// Square between 100 and 110
   TrickModel method61() {
     n1 = getRandomNumber(108, 101);
     answer = toStringValue(((n1 * n1)));
@@ -1028,6 +1033,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+// Square between 10 and 20
   TrickModel method62() {
     n1 = getRandomNumber(18, 11);
     answer = toStringValue(((n1 * n1)));
@@ -1036,6 +1042,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+// Square between 1 and 10
   TrickModel method63() {
     n1 = getRandomNumber(9, 1);
     n1 = int.parse(toStringValue(n1) + "25");
@@ -1045,6 +1052,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+  // Square between 20 and 30
   TrickModel method64() {
     n1 = getRandomNumber(29, 20);
     answer = toStringValue(((n1 * n1)));
@@ -1053,6 +1061,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+  // Square between 30 and 40
   TrickModel method65() {
     n1 = getRandomNumber(39, 30);
     answer = toStringValue(((n1 * n1)));
@@ -1061,6 +1070,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+// Square between 60 and 70
   TrickModel method66() {
     n1 = getRandomNumber(69, 60);
     answer = toStringValue(((n1 * n1)));
@@ -1069,6 +1079,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+  // Square between 70 and 80
   TrickModel method67() {
     n1 = getRandomNumber(79, 70);
     answer = toStringValue(((n1 * n1)));
@@ -1077,6 +1088,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+  // Square between 80 and 90
   TrickModel method68() {
     n1 = getRandomNumber(89, 80);
     answer = toStringValue(((n1 * n1)));
@@ -1085,6 +1097,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+  // Square ending with 75
   TrickModel method69() {
     n1 = getRandomNumber(50, 1);
     n1 = int.parse(toStringValue(n1) + "75");
@@ -1094,6 +1107,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+  // Square ending with 125
   TrickModel method70() {
     n1 = getRandomNumber(10, 1);
     n1 = int.parse(toStringValue(n1) + "125");
@@ -1103,6 +1117,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+  // Square enging with 05
   TrickModel method71() {
     n1 = getRandomNumber(10, 1);
     n1 = int.parse(toStringValue(n1) + "05");
@@ -1112,6 +1127,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+  // Square enging with 15
   TrickModel method72() {
     n1 = getRandomNumber(50, 1);
     n1 = int.parse(toStringValue(n1) + "15");
@@ -1121,6 +1137,7 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+  // Square enging with 95
   TrickModel method73() {
     n1 = getRandomNumber(10, 1);
     n1 = int.parse(toStringValue(n1) + "95");
@@ -1130,28 +1147,51 @@ class Method {
     return setTrickModel(squareSign);
   }
 
+// Power of 2 between 1 and 10
   TrickModel method74() {
     double n1 = 2;
     double n2 = getRandomNumber(9, 1).toDouble();
+    log('Look here');
+    log(getSplitString(toStringValue(n2)));
     answer = toStringValue((math.pow(n1, n2)));
     addDoubleOption();
-    question = getSplitString(toStringValue(n1)) +
-        "<sup><small>" +
-        getSplitString(toStringValue(n2)) +
-        "</small></sup>";
+    String power = (n2 == 1
+        ? '\u00B9'
+        : n2 == 2
+            ? '\u00B2'
+            : n2 == 3
+                ? '\u00B3'
+                : n2 == 4
+                    ? '\u2074'
+                    : n2 == 5
+                        ? '\u2075'
+                        : n2 == 6
+                            ? '\u2076'
+                            : n2 == 7
+                                ? '\u2077'
+                                : n2 == 8
+                                    ? '\u2078'
+                                    : n2 == 9
+                                        ? '\u2079'
+                                        : '');
+    question = getSplitString(toStringValue(n1)) + power;
+
     return setTrickModel(squareSign);
   }
 
+// Power of 2 between 10 and 99
   TrickModel method75() {
-    double n1 = getRandomNumber(99, 10).toDouble();
+    // double n1 = getRandomNumber(99, 10).toDouble();
+    double n1 = getRandomNumber((level <= 3 ? 15 : level * 3), 10).toDouble();
     answer = toStringValue((math.pow(n1, 2)));
     addDoubleOption();
     question = getSplitString(toStringValue(n1)) + squareSign;
     return setTrickModel('');
   }
 
+// Power of 2 between 100 and 999
   TrickModel method76() {
-    double n1 = getRandomNumber(999, 101).toDouble();
+    double n1 = getRandomNumber(level * 30, level * 3).toDouble();
     answer = toStringValue((math.pow(n1, 2)));
     addDoubleOption();
     question = getSplitString(toStringValue(n1)) + squareSign;
@@ -1162,8 +1202,9 @@ class Method {
     return trickModel;
   }
 
+// Power of 2 between 1000 and 9999
   TrickModel method77() {
-    double n1 = getRandomNumber(9999, 1000).toDouble();
+    double n1 = getRandomNumber(level * 333, level * 33).toDouble();
     answer = toStringValue((math.pow(n1, 2)));
     addDoubleOption();
     question = getSplitString(toStringValue(n1)) + squareSign;
@@ -1173,8 +1214,9 @@ class Method {
     return trickModel;
   }
 
+  // Power of 3 between 10 and 99
   TrickModel method78() {
-    double n1 = getRandomNumber(99, 10).toDouble();
+    double n1 = getRandomNumber((level <= 3 ? 15 : level * 3), 10).toDouble();
     answer = toStringValue((math.pow(n1, 3)));
     addDoubleOption();
     question = getSplitString(toStringValue(n1)) + cubeSign;
@@ -1184,6 +1226,7 @@ class Method {
     return trickModel;
   }
 
+// Power of 3 between 100 and 999
   TrickModel method79() {
     double n1 = getRandomNumber(999, 100).toDouble();
     answer = toStringValue((math.pow(n1, 3)));
@@ -1195,6 +1238,7 @@ class Method {
     return trickModel;
   }
 
+// Power of 4 between 1 and 500
   TrickModel method80() {
     double n1 = getRandomNumber(500, 1).toDouble();
     answer = toStringValue((math.pow(n1, 4)));

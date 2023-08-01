@@ -74,6 +74,7 @@ dependencies:
 
 
   url_launcher: ^6.1.4
+  flutter_math_fork: ^0.7.0
 
 
 

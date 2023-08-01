@@ -350,6 +350,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.0.0"
+  flutter_math_fork:
+    dependency: "direct main"
+    description:
+      name: flutter_math_fork
+      sha256: "012ca684618b74286ab84fcc2f0e8d66b03ad623b8f79aea738f6b9c287f432c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.0"
   flutter_native_timezone:
     dependency: "direct main"
     description:

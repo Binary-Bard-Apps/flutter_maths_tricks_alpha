@@ -131,40 +131,40 @@ class DataFile {
   static List<SubCategoryModel> getSubList_5() {
     List<SubCategoryModel> mainModelList = [];
 
-    mainModelList
-        .add(SubCategoryModel(title: 'Square numbers ending in 5', id: 57));
-    mainModelList.add(
-        SubCategoryModel(title: 'Square numbers between 90 and 99', id: 58));
-    mainModelList.add(
-        SubCategoryModel(title: 'Square numbers between 50 and 59', id: 59));
-    mainModelList.add(
-        SubCategoryModel(title: 'Square numbers between 40 and 49', id: 60));
-    mainModelList.add(
-        SubCategoryModel(title: 'Square numbers between 100 and 109', id: 61));
     mainModelList.add(
         SubCategoryModel(title: 'Square numbers between 10 and 19', id: 62));
-    mainModelList
-        .add(SubCategoryModel(title: 'Square numbers ending in 25', id: 63));
     mainModelList.add(
         SubCategoryModel(title: 'Square numbers between 20 and 29', id: 64));
     mainModelList.add(
         SubCategoryModel(title: 'Square numbers between 30 and 39', id: 65));
+    mainModelList.add(
+        SubCategoryModel(title: 'Square numbers between 40 and 49', id: 60));
+    mainModelList.add(
+        SubCategoryModel(title: 'Square numbers between 50 and 59', id: 59));
     mainModelList.add(
         SubCategoryModel(title: 'Square numbers between 60 and 69', id: 66));
     mainModelList.add(
         SubCategoryModel(title: 'Square numbers between 70 and 79', id: 67));
     mainModelList.add(
         SubCategoryModel(title: 'Square numbers between 80 and 89', id: 68));
+    mainModelList.add(
+        SubCategoryModel(title: 'Square numbers between 90 and 99', id: 58));
+    mainModelList.add(
+        SubCategoryModel(title: 'Square numbers between 100 and 109', id: 61));
     mainModelList
-        .add(SubCategoryModel(title: 'Square numbers ending in 75', id: 69));
-    mainModelList
-        .add(SubCategoryModel(title: 'Square numbers ending in 125', id: 70));
+        .add(SubCategoryModel(title: 'Square numbers ending in 5', id: 57));
     mainModelList
         .add(SubCategoryModel(title: 'Square numbers ending in 05', id: 71));
     mainModelList
         .add(SubCategoryModel(title: 'Square numbers ending in 15', id: 72));
     mainModelList
+        .add(SubCategoryModel(title: 'Square numbers ending in 25', id: 63));
+    mainModelList
+        .add(SubCategoryModel(title: 'Square numbers ending in 75', id: 69));
+    mainModelList
         .add(SubCategoryModel(title: 'Square numbers ending in 95', id: 73));
+    mainModelList
+        .add(SubCategoryModel(title: 'Square numbers ending in 125', id: 70));
 
     return mainModelList;
   }
