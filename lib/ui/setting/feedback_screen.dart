@@ -76,10 +76,10 @@ class _FeedbackScreen extends State<FeedbackScreen> {
                       }
 
                       final Email email = Email(
-                        body: feedback,
-                        subject: 'App Feedback',
-                        isHTML: false,
-                      );
+                          body: feedback,
+                          subject: 'App Feedback',
+                          isHTML: false,
+                          recipients: ['ankit.k.j1999@gmail.com']);
                       await FlutterEmailSender.send(email);
                     }
                   })

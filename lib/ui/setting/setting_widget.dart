@@ -111,6 +111,13 @@ class _SettingPage extends State<SettingPage> with TickerProviderStateMixin {
                         },
                         title: 'Feedback',
                       ),
+                      getItem(
+                        context: context,
+                        function: () {
+                          developerLaunchURL();
+                        },
+                        title: 'Contact Developer',
+                      ),
                     ],
                   )),
                 ],

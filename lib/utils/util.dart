@@ -32,6 +32,12 @@ launchURL() async {
   }
 }
 
+developerLaunchURL() async {
+  if (!await launchUrl(Uri.parse('https://ankit-kumar-weblink.web.app/#/'))) {
+    throw 'Could not launch ';
+  }
+}
+
 share() async {
   await FlutterShare.share(
       title: 'Math Trick',
