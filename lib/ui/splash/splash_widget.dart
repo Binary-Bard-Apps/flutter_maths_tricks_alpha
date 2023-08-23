@@ -60,7 +60,10 @@ class _SplashWidget extends State<SplashWidget> {
                       ),
                       15.verticalSpace,
                       getCustomFont('Math Tricks', 30, Colors.black, 2,
-                          fontWeight: FontWeight.w600, font: 'RedRose')
+                          fontWeight: FontWeight.w600, font: 'RedRose'),
+                      5.verticalSpace,
+                      getCustomFont('By Ankit Kumar', 20, Colors.black, 2,
+                          fontWeight: FontWeight.w400, font: 'RedRose')
                     ],
                   ),
                 )

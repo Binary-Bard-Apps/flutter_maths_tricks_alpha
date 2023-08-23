@@ -149,3 +149,6 @@ class _FeedbackScreen extends State<FeedbackScreen> {
     );
   }
 }
+
+// flutter build small app bundle release command
+// flutter build appbundle --target-platform android-arm,android-arm64,android-x64 --split-per-abi

@@ -175,13 +175,13 @@ class DataFile {
     mainModelList.add(SubCategoryModel(title: '2\u207f', id: 74));
     mainModelList.add(SubCategoryModel(title: 'a²\na = 10 ~ 99', id: 75));
     mainModelList.add(SubCategoryModel(title: 'a²\na = 100 ~ 999', id: 76));
-    mainModelList.add(SubCategoryModel(title: 'a²\na = 100 ~ 999', id: 77));
-    mainModelList.add(SubCategoryModel(title: 'a²\na = 1000 ~ 9999', id: 78));
-    mainModelList.add(SubCategoryModel(title: 'a³\na = 10 ~ 99', id: 79));
-    mainModelList.add(SubCategoryModel(title: 'a³\na = 100 ~ 999', id: 80));
-    mainModelList.add(SubCategoryModel(title: 'a⁴', id: 81));
-    mainModelList.add(SubCategoryModel(title: 'a⁶', id: 82));
-    mainModelList.add(SubCategoryModel(title: 'a⁹', id: 83));
+
+    mainModelList.add(SubCategoryModel(title: 'a²\na = 1000 ~ 9999', id: 77));
+    mainModelList.add(SubCategoryModel(title: 'a³\na = 10 ~ 99', id: 78));
+    mainModelList.add(SubCategoryModel(title: 'a³\na = 100 ~ 999', id: 79));
+    mainModelList.add(SubCategoryModel(title: 'a⁴\na = 1 ~ 99', id: 80));
+    mainModelList.add(SubCategoryModel(title: 'a⁶\na = 1 ~ 99', id: 81));
+    mainModelList.add(SubCategoryModel(title: 'a⁹\na = 1 ~ 99', id: 82));
 
     return mainModelList;
   }
@@ -189,12 +189,12 @@ class DataFile {
   static List<SubCategoryModel> getSubList_7() {
     List<SubCategoryModel> mainModelList = [];
 
-    mainModelList.add(SubCategoryModel(title: '²√a', id: 84));
-    mainModelList.add(SubCategoryModel(title: '³√a', id: 85));
-    mainModelList.add(SubCategoryModel(title: '⁴√a', id: 86));
-    mainModelList.add(SubCategoryModel(title: '⁶√a', id: 87));
-    mainModelList.add(SubCategoryModel(title: '⁹√a', id: 88));
-    mainModelList.add(SubCategoryModel(title: '⁵√a', id: 89));
+    mainModelList.add(SubCategoryModel(title: '²√a\na = 1 ~ 99', id: 83));
+    mainModelList.add(SubCategoryModel(title: '³√a\na = 1 ~ 99', id: 84));
+    mainModelList.add(SubCategoryModel(title: '⁴√a\na = 1 ~ 99', id: 85));
+    mainModelList.add(SubCategoryModel(title: '⁵√a\na = 1 ~ 99', id: 88));
+    mainModelList.add(SubCategoryModel(title: '⁶√a\na = 1 ~ 99', id: 86));
+    mainModelList.add(SubCategoryModel(title: '⁹√a\na = 1 ~ 99', id: 87));
 
     return mainModelList;
   }
@@ -204,22 +204,22 @@ class DataFile {
 
     mainModelList.add(SubCategoryModel(title: 'Calculate a Tip -1-', id: 90));
     mainModelList.add(SubCategoryModel(title: 'Calculate a Tip -2-', id: 91));
-    mainModelList.add(SubCategoryModel(title: '50%', id: 92));
-    mainModelList.add(SubCategoryModel(title: '25%', id: 93));
-    mainModelList.add(SubCategoryModel(title: '20%', id: 94));
-    mainModelList.add(SubCategoryModel(title: '15%', id: 95));
-    mainModelList.add(SubCategoryModel(title: '5%', id: 96));
-    mainModelList.add(SubCategoryModel(title: '4%', id: 97));
-    mainModelList.add(SubCategoryModel(title: '2%', id: 98));
     mainModelList.add(SubCategoryModel(title: '0.5%', id: 99));
+    mainModelList.add(SubCategoryModel(title: '2%', id: 98));
+    mainModelList.add(SubCategoryModel(title: '4%', id: 97));
+    mainModelList.add(SubCategoryModel(title: '5%', id: 96));
+    mainModelList.add(SubCategoryModel(title: '15%', id: 95));
+    mainModelList.add(SubCategoryModel(title: '20%', id: 94));
+    mainModelList.add(SubCategoryModel(title: '25%', id: 93));
+    mainModelList.add(SubCategoryModel(title: '40%', id: 107));
+    mainModelList.add(SubCategoryModel(title: '50%', id: 92));
+    mainModelList.add(SubCategoryModel(title: '75%', id: 105));
     mainModelList.add(SubCategoryModel(title: '150%', id: 100));
     mainModelList.add(SubCategoryModel(title: '200%', id: 101));
     mainModelList.add(SubCategoryModel(title: '250%', id: 102));
     mainModelList.add(SubCategoryModel(title: '300%', id: 103));
     mainModelList.add(SubCategoryModel(title: '500%', id: 104));
-    mainModelList.add(SubCategoryModel(title: '75%', id: 105));
     mainModelList.add(SubCategoryModel(title: '750%', id: 106));
-    mainModelList.add(SubCategoryModel(title: '40%', id: 107));
 
     return mainModelList;
   }
