@@ -154,11 +154,11 @@ class AdsFile {
         request: request,
         rewardedAdLoadCallback: RewardedAdLoadCallback(
           onAdLoaded: (RewardedAd ad) {
-            print('$ad loaded.');
+            // debugPrint('$ad loaded.');
             _rewardedAd = ad;
           },
           onAdFailedToLoad: (LoadAdError error) {
-            print('RewardedAd failed to load: $error');
+            // debugPrint('RewardedAd failed to load: $error');
             _rewardedAd = null;
             createRewardedAd();
           },
@@ -173,8 +173,8 @@ class AdsFile {
         request: request,
         adLoadCallback: InterstitialAdLoadCallback(
           onAdLoaded: (InterstitialAd ad) {
-            print('$ad loaded');
-            print('failed==== true');
+            // debugPrint('$ad loaded');
+            // debugPrint('failed==== true');
 
             _interstitialAd = ad;
           },
