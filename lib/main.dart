@@ -3,7 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_maths_tricks/app/app_routes.dart';
 import 'package:flutter_maths_tricks/app/key_util.dart';
+import 'package:flutter_maths_tricks/controller/setting_controller.dart';
 import 'package:flutter_maths_tricks/data/hive_data.dart';
+// import 'package:flutter_maths_tricks/generated/intl/messages_all.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 import 'package:flutter_maths_tricks/theme/app_theme.dart';
 import 'package:flutter_maths_tricks/theme/controller/theme_controller.dart';
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
@@ -16,13 +21,21 @@ import 'package:rxdart/rxdart.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 
+import 'generated/l10n.dart';
+
 String selectedNotificationPayload = "";
 
 ThemeController themeController = Get.put(ThemeController());
 String defTimeZoneName = "America/Detroit";
+SettingController settingController = Get.put(SettingController());
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // Load saved language
+  String? savedLanguage = await settingController.loadSelectedLanguage();
+  if (savedLanguage != null) {
+    settingController.selectedLanguage = savedLanguage;
+  }
 
   await _configureLocalTimeZone();
 
@@ -135,13 +148,28 @@ class MyApp extends StatelessWidget {
     return GetBuilder<ThemeController>(
       builder: (controller) {
         return GetMaterialApp(
-          title: 'Math Trick',
+          title: 'Math Trick Pro',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.theme,
           darkTheme: AppTheme.darkTheme,
           themeMode: controller.themeMode,
           routes: appRoutes,
           initialRoute: KeyUtil.splash,
+          locale: Locale(settingController
+              .selectedLanguage), // Set the selected language here
+          // locale: Locale('bn'), // Set the locale to Hindi
+          localizationsDelegates: [
+            S.delegate, // # Add this line
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: S.delegate.supportedLocales,
+
+          // supportedLocales: [
+          //   Locale('en', ''),
+          //   Locale('hi', ''),
+          // ],
         );
       },
       init: ThemeController(),

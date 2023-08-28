@@ -1,15 +1,11 @@
 import 'dart:collection';
-import 'dart:developer';
 import 'dart:math' as math;
 import 'dart:math';
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:flutter_maths_tricks/data/methods/addition/addition.dart';
 import 'package:flutter_maths_tricks/data/methods/common/common_methods.dart';
-import 'package:flutter_maths_tricks/data/methods/subtraction/substraction.dart';
 import 'package:flutter_maths_tricks/model/trick_model.dart';
-import 'package:get/get.dart';
 
 // import '../../model/trick_model.dart';
 
@@ -105,7 +101,10 @@ class Method {
 
   // Additon
   // TrickModel method1() {
-  //   return AdditionMethod().method1(); // Call method1 from addition_method.dart
+  //   debugPrint("Not working addtion");
+
+  //   AdditionMethod ab = AdditionMethod();
+  //   return ab.method1(); // Call method1 from addition_method.dart
   // }
 
   // Additon

@@ -75,6 +75,75 @@ class _SettingPage extends State<SettingPage> with TickerProviderStateMixin {
                           },
                           title: 'Night Mode',
                           value: themeController.isDarkTheme),
+                      // DropDown
+                      Container(
+                        margin: EdgeInsets.only(
+                            bottom: 20.h, right: horSpace, left: horSpace),
+                        height: 75.h,
+                        decoration: getDefaultDecoration(
+                            radius: 15.r,
+                            bgColor: themeController.isDarkTheme
+                                ? getCardColor(context)
+                                : getRandomColor(0).alphaColor),
+                        padding: EdgeInsets.symmetric(horizontal: 20.w),
+                        child: InkWell(
+                          child: Row(
+                            children: [
+                              Expanded(
+                                // child: getText(title),
+                                child: DropdownButton<String>(
+                                  // remove underline
+                                  underline: Container(),
+                                  hint: getText("Langauage"),
+                                  isExpanded: true,
+                                  icon: RotatedBox(
+                                    quarterTurns: 1,
+                                    child: getSvgIcon(
+                                      // icon: Icons.arrow_drop_down,
+                                      icon: 'next.svg',
+                                      height: 30,
+                                      color: getFontColor(context),
+                                    ),
+                                  ),
+                                  value: settingController
+                                      .selectedLanguage, // Updated value
+                                  // Set the default selected value here
+                                  onChanged: (String? newValue) {
+                                    settingController
+                                        .onLanguageChange(newValue!);
+                                  },
+                                  items: <String>[
+                                    'Select Language',
+                                    'English',
+                                    'Hindi',
+                                    'Bengali'
+                                  ]
+                                      .map<DropdownMenuItem<String>>(
+                                        (String value) =>
+                                            DropdownMenuItem<String>(
+                                          value: value,
+                                          child: getText(value),
+                                          // child: Text(value),
+                                        ),
+                                      )
+                                      .toList(),
+                                ),
+                                flex: 1,
+                              ),
+                              // RotatedBox(
+                              //   quarterTurns: 1,
+                              //   child: getSvgIcon(
+                              //     // icon: Icons.arrow_drop_down,
+                              //     icon: 'next.svg',
+                              //     height: 30,
+                              //     color: getFontColor(context),
+                              //   ),
+                              // )
+                            ],
+                          ),
+                        ),
+                      ),
+
                       getItem(
                         context: context,
                         function: () {

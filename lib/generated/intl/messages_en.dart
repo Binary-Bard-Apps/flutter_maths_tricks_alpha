@@ -21,5 +21,18 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "addition": MessageLookupByLibrary.simpleMessage("Addition"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("Click me!"),
+        "division": MessageLookupByLibrary.simpleMessage("Division"),
+        "exponential": MessageLookupByLibrary.simpleMessage("Exponential"),
+        "greeting": MessageLookupByLibrary.simpleMessage("Welcome to the App."),
+        "helloWorld": MessageLookupByLibrary.simpleMessage("Hello, World!"),
+        "multiplication":
+            MessageLookupByLibrary.simpleMessage("Multiplication"),
+        "nthRoot": MessageLookupByLibrary.simpleMessage("Nth Root"),
+        "percentage": MessageLookupByLibrary.simpleMessage("Percentage"),
+        "square": MessageLookupByLibrary.simpleMessage("Square"),
+        "subtraction": MessageLookupByLibrary.simpleMessage("Subtraction")
+      };
 }

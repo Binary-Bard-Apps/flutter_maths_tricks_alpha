@@ -1,4 +1,3 @@
-import 'package:flutter_maths_tricks/data/methods/method.dart';
 import 'package:flutter_maths_tricks/model/trick_model.dart';
 import 'package:flutter_maths_tricks/data/methods/common/common_methods.dart';
 

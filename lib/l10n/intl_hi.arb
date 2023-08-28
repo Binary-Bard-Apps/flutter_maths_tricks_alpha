@@ -1,0 +1,15 @@
+{
+    "@@locale": "hi",
+    "helloWorld": "नमस्ते, दुनिया!",
+    "greeting": "ऐप में आपका स्वागत है।",
+    "buttonText": "मुझे दबाएं!",
+    "addition": "जोड़",
+    "subtraction": "घटाव",
+    "multiplication": "गुणा",
+    "division": "विभाजन",
+    "square": "वर्ग",
+    "exponential": "घातांक",
+    "nthRoot": "नवीं जड़",
+    "percentage": "प्रतिशत"
+  }
+  

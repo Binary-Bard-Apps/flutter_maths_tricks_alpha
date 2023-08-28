@@ -1,0 +1,15 @@
+{
+    "@@locale": "bn",
+    "helloWorld": "হ্যালো, বিশ্ব!",
+    "greeting": "অ্যাপে আপনাকে স্বাগতম।",
+    "buttonText": "আমাকে চাপুন!",
+    "addition": "যোগ",
+    "subtraction": "বিয়োগ",
+    "multiplication": "গুন",
+    "division": "ভাগ",
+    "square": "বর্গ",
+    "exponential": "গণিতিক",
+    "nthRoot": "এনথ রুট",
+    "percentage": "শতাংশ"
+  }
+  

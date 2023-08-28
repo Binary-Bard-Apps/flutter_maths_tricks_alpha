@@ -1,18 +1,21 @@
+// data_file.dart
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_maths_tricks/generated/l10n.dart';
 import 'package:flutter_maths_tricks/model/category_model.dart';
 import 'package:flutter_maths_tricks/model/sub_category_model.dart';
 
 class DataFile {
   static List<CategoryModel> getCategoryList() {
     List<CategoryModel> list = [];
-    list.add(CategoryModel(title: 'Addition', icon: 'addition.svg'));
-    list.add(CategoryModel(title: 'Subtraction', icon: 'minus.svg'));
-    list.add(
-        CategoryModel(title: 'Multiplication', icon: 'multiplication.svg'));
-    list.add(CategoryModel(title: 'Division', icon: 'division.svg'));
-    list.add(CategoryModel(title: 'Squaring', icon: 'square.svg'));
-    list.add(CategoryModel(title: 'Exponentiation', icon: 'power.svg'));
-    list.add(CategoryModel(title: 'Nth root', icon: 'square_root.svg'));
-    list.add(CategoryModel(title: 'Percentage', icon: 'percent.svg'));
+    list.add(CategoryModel(title: S.current.addition, icon: 'addition.svg'));
+    list.add(CategoryModel(title: S.current.subtraction, icon: 'minus.svg'));
+    list.add(CategoryModel(
+        title: S.current.multiplication, icon: 'multiplication.svg'));
+    list.add(CategoryModel(title: S.current.division, icon: 'division.svg'));
+    list.add(CategoryModel(title: S.current.square, icon: 'square.svg'));
+    list.add(CategoryModel(title: S.current.exponential, icon: 'power.svg'));
+    list.add(CategoryModel(title: S.current.nthRoot, icon: 'square_root.svg'));
+    list.add(CategoryModel(title: S.current.percentage, icon: 'percent.svg'));
 
     return list;
   }

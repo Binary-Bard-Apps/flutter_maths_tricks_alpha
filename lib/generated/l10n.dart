@@ -49,6 +49,116 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Hello, World!`
+  String get helloWorld {
+    return Intl.message(
+      'Hello, World!',
+      name: 'helloWorld',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome to the App.`
+  String get greeting {
+    return Intl.message(
+      'Welcome to the App.',
+      name: 'greeting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Click me!`
+  String get buttonText {
+    return Intl.message(
+      'Click me!',
+      name: 'buttonText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Addition`
+  String get addition {
+    return Intl.message(
+      'Addition',
+      name: 'addition',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subtraction`
+  String get subtraction {
+    return Intl.message(
+      'Subtraction',
+      name: 'subtraction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Multiplication`
+  String get multiplication {
+    return Intl.message(
+      'Multiplication',
+      name: 'multiplication',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Division`
+  String get division {
+    return Intl.message(
+      'Division',
+      name: 'division',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Square`
+  String get square {
+    return Intl.message(
+      'Square',
+      name: 'square',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exponential`
+  String get exponential {
+    return Intl.message(
+      'Exponential',
+      name: 'exponential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nth Root`
+  String get nthRoot {
+    return Intl.message(
+      'Nth Root',
+      name: 'nthRoot',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Percentage`
+  String get percentage {
+    return Intl.message(
+      'Percentage',
+      name: 'percentage',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -57,6 +167,8 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'bn'),
+      Locale.fromSubtags(languageCode: 'hi'),
     ];
   }
 

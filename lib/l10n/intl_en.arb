@@ -1,1 +1,15 @@
-{}
+{
+    "@@locale": "en",
+    "helloWorld": "Hello, World!",
+    "greeting": "Welcome to the App.",
+    "buttonText": "Click me!",
+    "addition": "Addition",
+    "subtraction": "Subtraction",
+    "multiplication": "Multiplication",
+    "division": "Division",
+    "square": "Square",
+    "exponential": "Exponential",
+    "nthRoot": "Nth Root",
+    "percentage": "Percentage"
+  }
+  

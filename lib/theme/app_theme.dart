@@ -16,28 +16,17 @@ Color color7 = "#8EDCE9".toColor();
 Color color8 = "#DB89DD".toColor();
 Color color9 = "#6FC993".toColor();
 
-
-
-
-
 Color primaryColor = "#7F6AFF".toColor();
 Color progressColor = "#F4F4F4".toColor();
 Color redAlphaColor = "#FFE9E9".toColor();
 Color greenAlphaColor = "#E9FDE4".toColor();
 
-
-
 class AppTheme {
-
-
-
-
   static ThemeData get theme {
     ThemeData base = ThemeData.light();
 
     return base.copyWith(
-      primaryColor:primaryColor,
-      backgroundColor: appBackgroundColor,
+      primaryColor: primaryColor,
       scaffoldBackgroundColor: appBackgroundColor,
       cardColor: cardColor,
       brightness: Brightness.light,
@@ -47,6 +36,18 @@ class AppTheme {
       appBarTheme: const AppBarTheme(
         systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
+      colorScheme: ColorScheme(
+          background: appBackgroundColor,
+          brightness: Brightness.light,
+          onBackground: appBackgroundColor,
+          onPrimary: primaryColor,
+          onSecondary: primaryColor,
+          onSurface: appBackgroundColor,
+          primary: primaryColor,
+          secondary: primaryColor,
+          surface: appBackgroundColor,
+          error: Colors.red,
+          onError: Colors.red),
     );
   }
 
@@ -59,16 +60,28 @@ class AppTheme {
       hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
-      backgroundColor: darkBackgroundColor,
       scaffoldBackgroundColor: darkBackgroundColor,
       cardColor: darkCardColor,
       brightness: Brightness.dark,
       appBarTheme: const AppBarTheme(
         systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
+      colorScheme: ColorScheme(
+          background: darkBackgroundColor,
+          brightness: Brightness.dark,
+          onBackground: darkBackgroundColor,
+          onPrimary: primaryColor,
+          onSecondary: primaryColor,
+          onSurface: darkBackgroundColor,
+          primary: primaryColor,
+          secondary: primaryColor,
+          surface: darkBackgroundColor,
+          error: Colors.red,
+          onError: Colors.red),
     );
   }
 }
+
 extension ColorExtension on String {
   toColor() {
     var hexColor = this.replaceAll("#", "");
