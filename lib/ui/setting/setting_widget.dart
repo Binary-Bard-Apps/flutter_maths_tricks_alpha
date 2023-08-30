@@ -1,3 +1,4 @@
+// settig_widget.dart
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_maths_tricks/app/key_util.dart';
@@ -76,6 +77,7 @@ class _SettingPage extends State<SettingPage> with TickerProviderStateMixin {
                           title: 'Night Mode',
                           value: themeController.isDarkTheme),
                       // DropDown
+
                       Container(
                         margin: EdgeInsets.only(
                             bottom: 20.h, right: horSpace, left: horSpace),
@@ -91,54 +93,46 @@ class _SettingPage extends State<SettingPage> with TickerProviderStateMixin {
                             children: [
                               Expanded(
                                 // child: getText(title),
-                                child: DropdownButton<String>(
-                                  // remove underline
-                                  underline: Container(),
-                                  hint: getText("Langauage"),
-                                  isExpanded: true,
-                                  icon: RotatedBox(
-                                    quarterTurns: 1,
-                                    child: getSvgIcon(
-                                      // icon: Icons.arrow_drop_down,
-                                      icon: 'next.svg',
-                                      height: 30,
-                                      color: getFontColor(context),
+                                child: Obx(() {
+                                  return DropdownButton<String>(
+                                    // remove underline
+                                    underline: Container(),
+                                    hint: getText("Langauage"),
+                                    isExpanded: true,
+                                    icon: RotatedBox(
+                                      quarterTurns: 1,
+                                      child: getSvgIcon(
+                                        // icon: Icons.arrow_drop_down,
+                                        icon: 'next.svg',
+                                        height: 30,
+                                        color: getFontColor(context),
+                                      ),
                                     ),
-                                  ),
-                                  value: settingController
-                                      .selectedLanguage, // Updated value
-                                  // Set the default selected value here
-                                  onChanged: (String? newValue) {
-                                    settingController
-                                        .onLanguageChange(newValue!);
-                                  },
-                                  items: <String>[
-                                    'Select Language',
-                                    'English',
-                                    'Hindi',
-                                    'Bengali'
-                                  ]
-                                      .map<DropdownMenuItem<String>>(
-                                        (String value) =>
-                                            DropdownMenuItem<String>(
-                                          value: value,
-                                          child: getText(value),
-                                          // child: Text(value),
-                                        ),
-                                      )
-                                      .toList(),
-                                ),
+                                    value: settingController.selectedLanguage
+                                        .value, // Use .value to access RxString value
+                                    onChanged: (String? newValue) {
+                                      settingController
+                                          .onLanguageChange(newValue!);
+                                    },
+                                    items: <String>[
+                                      'English:en',
+                                      'Hindi:hi',
+                                      'Bengali:bn'
+                                    ].map<DropdownMenuItem<String>>(
+                                      (String value) {
+                                        final parts = value.split(':');
+                                        final language = parts[0];
+                                        final code = parts[1];
+                                        return DropdownMenuItem<String>(
+                                          value: code,
+                                          child: getText(language),
+                                        );
+                                      },
+                                    ).toList(),
+                                  );
+                                }),
                                 flex: 1,
                               ),
-                              // RotatedBox(
-                              //   quarterTurns: 1,
-                              //   child: getSvgIcon(
-                              //     // icon: Icons.arrow_drop_down,
-                              //     icon: 'next.svg',
-                              //     height: 30,
-                              //     color: getFontColor(context),
-                              //   ),
-                              // )
                             ],
                           ),
                         ),

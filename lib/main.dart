@@ -33,8 +33,11 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Load saved language
   String? savedLanguage = await settingController.loadSelectedLanguage();
+  print('&&&&&&&&&&&&&&&&&&&&&' +
+      "Saved Language: $savedLanguage"); // Add this line
+
   if (savedLanguage != null) {
-    settingController.selectedLanguage = savedLanguage;
+    settingController.selectedLanguage.value = savedLanguage;
   }
 
   await _configureLocalTimeZone();
@@ -155,8 +158,10 @@ class MyApp extends StatelessWidget {
           themeMode: controller.themeMode,
           routes: appRoutes,
           initialRoute: KeyUtil.splash,
-          locale: Locale(settingController
-              .selectedLanguage), // Set the selected language here
+          locale: Locale(settingController.selectedLanguage.value),
+
+          // locale: Locale(settingController
+          //     .selectedLanguage), // Set the selected language here
           // locale: Locale('bn'), // Set the locale to Hindi
           localizationsDelegates: [
             S.delegate, // # Add this line

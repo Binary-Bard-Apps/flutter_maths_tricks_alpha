@@ -11,39 +11,47 @@ class SettingController extends GetxController {
   RxBool isSound = true.obs;
   RxBool isVibration = true.obs;
 
-  // Add this function to save the selected language
-  Future<void> saveSelectedLanguage(String language) async {
+// Add this function to save the selected language
+  Future<void> saveSelectedLanguage(String languageCode) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setString('selectedLanguage', language);
+    await prefs.setString('selectedLanguage', languageCode);
   }
 
-  // Add this function to load the saved language
+// Add this function to load the saved language
+
   Future<String?> loadSelectedLanguage() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     return prefs.getString('selectedLanguage');
   }
 
-  String selectedLanguage = 'Select Language'; // Default language
+  // String selectedLanguage = 'English'; // Default language
+  RxString selectedLanguage = 'en'.obs; // Use RxString for selected language
 
   void onLanguageChange(String newValue) {
-    selectedLanguage = newValue;
-    if (newValue == 'English') {
-      Get.updateLocale(Locale('en', ''));
-    } else if (newValue == 'Hindi') {
-      Get.updateLocale(Locale('hi', ''));
-    } else if (newValue == 'Bengali') {
-      Get.updateLocale(
-          Locale('bn', '')); // Make sure you have the correct language code
-    }
-    saveSelectedLanguage(newValue); // Save the selected language
+    selectedLanguage.value = newValue; // Update the selected language
+
+    saveSelectedLanguage(newValue);
     update();
   }
 
   @override
-  void onInit() {
+  void onInit() async {
+    // Load saved language or set a default language
+    final savedLanguage = await loadSelectedLanguage();
+    if (savedLanguage != null) {
+      selectedLanguage.value = savedLanguage;
+    }
+
     setData();
     super.onInit();
   }
+
+  // void onInit() {
+  //   // Load saved language or set a default language
+  //   loadSelectedLanguage();
+  //   setData();
+  //   super.onInit();
+  // }
 
   Future<void> setData() async {
     bool sound = await getSound();
