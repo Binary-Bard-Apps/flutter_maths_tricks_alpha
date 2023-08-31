@@ -1,8 +1,9 @@
+// theme_controller.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class ThemeController extends GetxController{
+class ThemeController extends GetxController {
   static String pkgName = "o_level_quiz_";
   static String IS_DARK_MODE = pkgName + "themeMode";
 
@@ -11,13 +12,11 @@ class ThemeController extends GetxController{
 
   SharedPreferences? prefs;
 
-
   @override
   void onInit() {
     setTheme();
     super.onInit();
   }
-
 
   Future<void> setTheme() async {
     prefs = await SharedPreferences.getInstance();
@@ -44,8 +43,6 @@ class ThemeController extends GetxController{
       await prefs!.setInt(IS_DARK_MODE, themeMode.index);
     }
 
-
     update();
   }
-
 }

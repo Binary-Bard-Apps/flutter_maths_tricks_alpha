@@ -27,11 +27,23 @@ class SettingController extends GetxController {
   // String selectedLanguage = 'English'; // Default language
   RxString selectedLanguage = 'en'.obs; // Use RxString for selected language
 
+  // void onLanguageChange(String newValue) {
+  //   selectedLanguage.value = newValue; // Update the selected language
+
+  //   saveSelectedLanguage(newValue);
+  //   update();
+  // }
+
   void onLanguageChange(String newValue) {
     selectedLanguage.value = newValue; // Update the selected language
-
     saveSelectedLanguage(newValue);
+    updateLocale(); // Update locale immediately
     update();
+  }
+
+  void updateLocale() {
+    Locale newLocale = Locale(selectedLanguage.value);
+    Get.updateLocale(newLocale);
   }
 
   @override
