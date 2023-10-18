@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_maths_tricks/controller/quiz_provider.dart';
 import 'package:flutter_maths_tricks/theme/color_scheme.dart';
 import 'package:flutter_maths_tricks/ui/dialog/quiz_exit_dialog.dart';
-
 import 'package:flutter_maths_tricks/ui/quiz/answer_view.dart';
 import 'package:flutter_maths_tricks/ui/quiz/hint_button_widget.dart';
 import 'package:flutter_maths_tricks/ui/quiz/quiz_data_widget.dart';
@@ -115,7 +113,7 @@ class _QuizPage extends State<QuizPage> with TickerProviderStateMixin {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  getCustomFont(
+                                  getCustomScaleAnimatedFont(
                                       getQuestionType(
                                           quizProvider,
                                           quizProvider

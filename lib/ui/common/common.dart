@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:auto_size_text_field/auto_size_text_field.dart';
 import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter/cupertino.dart';
@@ -385,6 +386,38 @@ Widget getCustomFont(
     maxLines: maxLine,
     softWrap: true,
     textAlign: textAlign,
+  );
+}
+
+Widget getCustomScaleAnimatedFont(
+  String text,
+  double fontSize,
+  Color fontColor,
+  int maxLine, {
+  TextOverflow overflow = TextOverflow.ellipsis,
+  TextDecoration decoration = TextDecoration.none,
+  FontWeight fontWeight = FontWeight.normal,
+  TextAlign textAlign = TextAlign.start,
+  String? font,
+  txtHeight,
+}) {
+  return DefaultTextStyle(
+    overflow: overflow,
+    maxLines: maxLine,
+    softWrap: true,
+    textAlign: textAlign,
+    style: TextStyle(
+        decoration: decoration,
+        fontSize: fontSize.sp,
+        fontStyle: FontStyle.normal,
+        color: fontColor,
+        fontFamily: font == null ? fontFamily : font,
+        fontWeight: fontWeight),
+    child: AnimatedTextKit(
+      animatedTexts: [
+        ScaleAnimatedText(text),
+      ],
+    ),
   );
 }
 

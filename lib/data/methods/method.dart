@@ -106,7 +106,7 @@ class Method {
   //   AdditionMethod ab = AdditionMethod();
   //   return ab.method1(); // Call method1 from addition_method.dart
   // }
-
+  //
   // Additon
   TrickModel method1() {
     int ul_one = (level + level) * getRandomNumber(50, 41);
@@ -141,7 +141,7 @@ class Method {
     return setTrickModel(addSign);
   }
 
-// Substraction
+  // Substraction
   TrickModel method3() {
     int ul_one = (level + level) * getRandomNumber(50, 41);
     int ul_two = (level + level) * getRandomNumber(40, 31);
@@ -159,7 +159,7 @@ class Method {
     return setTrickModel(subSign);
   }
 
-// Subtracting from 1000
+  // Subtracting from 1000
 
   TrickModel method4() {
     n1 = 1000;
@@ -178,7 +178,7 @@ class Method {
     return setTrickModel(subSign);
   }
 
-// Subtracting number close to 100
+  // Subtracting number close to 100
   TrickModel method5() {
     int ul_one = (level) * getRandomNumber(99, 75);
     int ll_one = (level) * getRandomNumber(74, 69);

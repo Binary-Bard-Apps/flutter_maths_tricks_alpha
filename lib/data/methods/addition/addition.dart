@@ -1,9 +1,11 @@
-import 'package:flutter_maths_tricks/model/trick_model.dart';
 import 'package:flutter_maths_tricks/data/methods/common/common_methods.dart';
+import 'package:flutter_maths_tricks/data/methods/method.dart';
+import 'package:flutter_maths_tricks/model/trick_model.dart';
 
-class AdditionMethod extends CommonMethods {
+class AdditionMethod extends CommonMethods with Method {
   // Addition
   TrickModel method1() {
+    print("AdditionMethod++++++++++++++");
     int ul_one = (level + level) * getRandomNumber(50, 41);
     int ul_two = (level + level) * getRandomNumber(40, 31);
     int ll_one = (level + level) * getRandomNumber(30, 25);

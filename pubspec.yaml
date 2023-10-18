@@ -68,6 +68,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: 
+  animated_text_kit: ^4.2.2
 
   
 
